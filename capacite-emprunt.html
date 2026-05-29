@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur de Capacité d'Emprunt 2026 — Combien pouvez-vous emprunter ? | ChiffreClair</title>
+<meta name="description" content="Calculez votre capacité d'emprunt 2026 selon vos revenus, vos charges et le taux d'endettement de 35 %. Découvrez le montant maximum de votre prêt immobilier. Gratuit.">
+<link rel="canonical" href="https://chiffreclair.fr/capacite-emprunt.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur de capacité d'emprunt","url":"https://chiffreclair.fr/capacite-emprunt.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="credit.html">Crédit</a> › Capacité d'emprunt</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Crédit · avant achat immobilier</span>
+    <h1>Calculateur de capacité d'emprunt</h1>
+    <p class="lead">Découvrez le montant maximum que vous pouvez emprunter selon vos revenus, dans la limite du taux d'endettement de 35 %.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="revenus">Revenus nets mensuels du foyer</label><div class="input-suffix"><input type="number" id="revenus" value="3000" min="0" step="50"><span class="sfx">€</span></div></div>
+      <div class="field"><label for="charges">Charges mensuelles (crédits en cours)</label><div class="input-suffix"><input type="number" id="charges" value="0" min="0" step="20"><span class="sfx">€</span></div></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label for="taux">Taux d'intérêt annuel</label><div class="input-suffix"><input type="number" id="taux" value="3.5" min="0" step="0.05"><span class="sfx">%</span></div></div>
+      <div class="field"><label for="duree">Durée du prêt : <span id="dureeLabel">20 ans</span></label><input type="range" id="duree" min="5" max="30" value="20" step="1"><div class="rangeval"><span>5 ans</span><span>30 ans</span></div></div>
+    </div>
+    <button class="btn" id="calcBtn">Calculer ma capacité d'emprunt</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker">Vous pouvez emprunter jusqu'à</span><div class="big" id="capacite">—</div><div class="sub">avec une mensualité de <span id="mensualiteMax">—</span></div></div>
+    <div class="stats"><div class="stat"><div class="v" id="tauxEndettement">35 %</div><div class="k">Taux d'endettement appliqué</div></div><div class="stat green"><div class="v" id="resteVivre">—</div><div class="k">Reste à vivre estimé</div></div></div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Calcul basé sur le taux d'endettement maximal de 35 % recommandé par le HCSF. Les banques étudient aussi votre apport, votre reste à vivre et la stabilité de vos revenus. Estimation indicative.</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Comment se calcule la capacité d'emprunt&nbsp;?</h2>
+    <p>La capacité d'emprunt correspond au montant qu'une banque accepte de vous prêter. Elle découle de votre <strong>mensualité maximale</strong>, plafonnée à <strong>35 % de vos revenus nets</strong> (charges déduites). À partir de cette mensualité, du taux et de la durée, on remonte au capital empruntable avec la formule d'amortissement inversée.</p>
+    <p>Une fois votre capacité connue, simulez le coût total avec notre <a href="calculateur-credit.html">calculateur de crédit</a>, et vérifiez votre <a href="salaire-brut-net.html">salaire net</a>.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Le taux d'endettement de 35 % est-il obligatoire&nbsp;?</dt><dd>C'est la limite recommandée par le HCSF, assurance comprise. Les banques peuvent y déroger dans une minorité de dossiers.</dd>
+      <dt>L'apport personnel compte-t-il&nbsp;?</dt><dd>Oui : il s'ajoute à votre capacité d'emprunt pour déterminer votre budget total d'achat.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="calculateur-credit.html" class="related-card"><span class="kicker">Crédit</span><h3>Calculateur de crédit</h3><p>Mensualité et coût total de votre prêt.</p></a>
+      <a href="rachat-credit.html" class="related-card"><span class="kicker">Crédit</span><h3>Rachat de crédit</h3><p>Réduisez vos mensualités actuelles.</p></a>
+      <a href="salaire-brut-net.html" class="related-card"><span class="kicker">Salaire</span><h3>Salaire brut en net</h3><p>La base de votre taux d'endettement.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil financier.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  var dureeEl=document.getElementById('duree'),dureeLabel=document.getElementById('dureeLabel');
+  dureeEl.addEventListener('input',function(){dureeLabel.textContent=dureeEl.value+' ans';});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var rev=parseFloat(document.getElementById('revenus').value);
+    var ch=parseFloat(document.getElementById('charges').value)||0;
+    var t=parseFloat(document.getElementById('taux').value)/100;
+    var annees=parseInt(dureeEl.value,10);
+    if(isNaN(rev)||rev<0)return;
+    var mensMax=rev*0.35-ch; if(mensMax<0)mensMax=0;
+    var n=annees*12,i=t/12,capital;
+    capital=(i===0)?mensMax*n:mensMax*(1-Math.pow(1+i,-n))/i;
+    document.getElementById('capacite').textContent=eur(capital);
+    document.getElementById('mensualiteMax').textContent=eur(mensMax)+' / mois';
+    document.getElementById('resteVivre').textContent=eur(rev-mensMax-ch);
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

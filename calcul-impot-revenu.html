@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcul Impôt sur le Revenu 2026 — Barème, Parts & Taux | ChiffreClair</title>
+<meta name="description" content="Calculez votre impôt sur le revenu 2026 avec le barème officiel et le quotient familial. Obtenez votre impôt, votre taux moyen et votre taux marginal. Gratuit.">
+<link rel="canonical" href="https://chiffreclair.fr/calcul-impot-revenu.html">
+<meta property="og:title" content="Calcul Impôt sur le Revenu 2026 — ChiffreClair">
+<meta property="og:description" content="Estimez votre impôt avec le barème 2026 et le quotient familial.">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calcul impôt sur le revenu","url":"https://chiffreclair.fr/calcul-impot-revenu.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Quel est le barème de l'impôt 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Le barème progressif comporte cinq tranches : 0 %, 11 %, 30 %, 41 % et 45 %, appliquées au revenu par part fiscale."}},
+{"@type":"Question","name":"Qu'est-ce que le quotient familial ?","acceptedAnswer":{"@type":"Answer","text":"C'est le nombre de parts du foyer fiscal : 1 part par adulte, 0,5 par enfant pour les deux premiers, 1 part à partir du troisième. Il réduit l'impôt des familles."}}]}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav">
+      <a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a>
+      <a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="impots.html">Impôts</a> › Impôt sur le revenu</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Fiscalité · barème 2026</span>
+    <h1>Calcul de l'impôt sur le revenu 2026</h1>
+    <p class="lead">Estimez votre impôt à partir de votre revenu net imposable et de votre nombre de parts, avec le barème progressif officiel.</p>
+  </header>
+
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+
+  <div class="card">
+    <div class="field">
+      <label for="revenu">Revenu net imposable annuel du foyer</label>
+      <div class="input-suffix">
+        <input type="number" id="revenu" value="35000" min="0" step="500">
+        <span class="sfx">€</span>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="field">
+        <label for="situation">Situation</label>
+        <select id="situation">
+          <option value="1">Célibataire (1 part)</option>
+          <option value="2">Marié / Pacsé (2 parts)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="enfants">Enfants à charge</label>
+        <input type="number" id="enfants" value="0" min="0" max="10" step="1">
+      </div>
+    </div>
+    <button class="btn" id="calcBtn">Calculer mon impôt</button>
+  </div>
+
+  <div class="result" id="result">
+    <div class="headline-result">
+      <span class="kicker">Impôt sur le revenu estimé</span>
+      <div class="big" id="impot">—</div>
+      <div class="sub">soit <span id="impotMois">—</span> par mois de prélèvement</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v" id="tauxMoyen">—</div><div class="k">Taux moyen d'imposition</div></div>
+      <div class="stat green"><div class="v" id="tauxMarginal">—</div><div class="k">Tranche marginale (TMI)</div></div>
+    </div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+
+  <div class="trust">
+    <div>
+      <div class="who">Méthode &amp; fiabilité</div>
+      <p>Calcul basé sur le barème progressif 2026 et le quotient familial. Il ne tient pas compte de la décote, du plafonnement des effets du quotient familial, ni des réductions et crédits d'impôt. Pour un calcul officiel, utilisez le simulateur d'<a href="https://www.impots.gouv.fr" rel="nofollow noopener" target="_blank">impots.gouv.fr</a>.</p>
+    </div>
+  </div>
+
+  <section class="prose" style="margin-top:30px">
+    <h2>Le barème de l'impôt sur le revenu 2026</h2>
+    <p>L'impôt est <strong>progressif</strong> : chaque tranche de revenu (par part) est taxée à son propre taux.</p>
+    <table style="font-family:var(--sans)">
+      <thead><tr><th>Tranche de revenu par part</th><th>Taux</th></tr></thead>
+      <tbody>
+        <tr><td>Jusqu'à 11 497 €</td><td>0 %</td></tr>
+        <tr><td>De 11 497 € à 29 315 €</td><td>11 %</td></tr>
+        <tr><td>De 29 315 € à 83 823 €</td><td>30 %</td></tr>
+        <tr><td>De 83 823 € à 180 294 €</td><td>41 %</td></tr>
+        <tr><td>Au-delà de 180 294 €</td><td>45 %</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Taux moyen et taux marginal : la différence</h2>
+    <p>Le <strong>taux marginal (TMI)</strong> est le taux de votre dernière tranche atteinte — utile pour anticiper l'impôt sur un revenu supplémentaire. Le <strong>taux moyen</strong> est l'impôt total rapporté au revenu : il est toujours plus faible que le taux marginal grâce à la progressivité.</p>
+    <p>Pour estimer votre revenu imposable, partez de votre <a href="salaire-brut-net.html">salaire net</a>.</p>
+
+    <dl class="faq">
+      <h2>Questions fréquentes</h2>
+      <dt>Quelle différence entre revenu net et revenu net imposable&nbsp;?</dt>
+      <dd>Le net imposable est légèrement supérieur au net à payer (une part de CSG n'est pas déductible). Il figure sur votre bulletin de paie et votre déclaration.</dd>
+      <dt>Comment fonctionne le quotient familial&nbsp;?</dt>
+      <dd>1 part par adulte, 0,5 part pour chacun des deux premiers enfants, 1 part à partir du troisième. Plus vous avez de parts, plus l'impôt diminue.</dd>
+    </dl>
+  </section>
+
+  <section class="related">
+    <span class="kicker">À calculer aussi</span>
+    <h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="salaire-brut-net.html" class="related-card"><span class="kicker">Salaire</span><h3>Salaire brut en net</h3><p>Votre revenu net, base de l'impôt.</p></a>
+      <a href="prime-activite.html" class="related-card"><span class="kicker">Aides CAF</span><h3>Prime d'activité</h3><p>Un complément non imposable pour les revenus modestes.</p></a>
+      <a href="interets-composes.html" class="related-card"><span class="kicker">Épargne</span><h3>Intérêts composés</h3><p>Faites fructifier ce qu'il vous reste.</p></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil fiscal.</div>
+  </div>
+</footer>
+
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+
+  // Barème 2026 (revenus 2025), par part
+  var tranches=[
+    {plafond:11497, taux:0},
+    {plafond:29315, taux:0.11},
+    {plafond:83823, taux:0.30},
+    {plafond:180294, taux:0.41},
+    {plafond:Infinity, taux:0.45}
+  ];
+
+  function impotParPart(rpp){
+    var impot=0, bas=0;
+    for(var i=0;i<tranches.length;i++){
+      var t=tranches[i];
+      if(rpp>t.plafond){ impot+=(t.plafond-bas)*t.taux; bas=t.plafond; }
+      else { impot+=(rpp-bas)*t.taux; break; }
+    }
+    return impot;
+  }
+  function tmi(rpp){
+    for(var i=0;i<tranches.length;i++){ if(rpp<=tranches[i].plafond) return tranches[i].taux; }
+    return 0.45;
+  }
+
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var revenu=parseFloat(document.getElementById('revenu').value);
+    var parts=parseFloat(document.getElementById('situation').value);
+    var enfants=parseInt(document.getElementById('enfants').value,10)||0;
+    if(isNaN(revenu)||revenu<0)return;
+
+    for(var i=1;i<=enfants;i++){ parts += (i<=2)?0.5:1; }
+
+    var rpp=revenu/parts;
+    var impot=impotParPart(rpp)*parts;
+    if(impot<0)impot=0;
+
+    var tauxMoyen = revenu>0 ? (impot/revenu*100) : 0;
+
+    document.getElementById('impot').textContent=impot.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+    document.getElementById('impotMois').textContent=(impot/12).toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+    document.getElementById('tauxMoyen').textContent=tauxMoyen.toLocaleString('fr-FR',{maximumFractionDigits:1})+' %';
+    document.getElementById('tauxMarginal').textContent=(tmi(rpp)*100)+' %';
+
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

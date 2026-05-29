@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcul RSA 2026 — Estimez votre Revenu de Solidarité Active | ChiffreClair</title>
+<meta name="description" content="Estimez votre RSA 2026 selon votre situation et vos ressources : célibataire, couple, avec enfants. Simulateur gratuit du revenu de solidarité active.">
+<link rel="canonical" href="https://chiffreclair.fr/calcul-rsa.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calcul RSA","url":"https://chiffreclair.fr/calcul-rsa.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="aides-sociales.html">Aides sociales</a> › RSA</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Aide CAF · revenu minimum</span>
+    <h1>Calcul du RSA 2026</h1>
+    <p class="lead">Estimez le montant de votre revenu de solidarité active selon votre foyer et vos ressources.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="situation">Situation</label><select id="situation"><option value="seul">Personne seule</option><option value="couple">Couple</option></select></div>
+      <div class="field"><label for="enfants">Enfants / personnes à charge</label><input type="number" id="enfants" value="0" min="0" max="10" step="1"></div>
+    </div>
+    <div class="field"><label for="ressources">Ressources mensuelles du foyer (salaires, allocations…)</label><div class="input-suffix"><input type="number" id="ressources" value="0" min="0" step="20"><span class="sfx">€</span></div></div>
+    <label style="font-weight:400;font-size:.85rem;color:var(--navy-soft)"><input type="checkbox" id="logement" style="width:auto;display:inline" checked> Je bénéficie d'une aide au logement ou suis hébergé gratuitement</label>
+    <button class="btn" id="calcBtn" style="margin-top:14px">Estimer mon RSA</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker">Estimation de votre RSA</span><div class="big" id="rsa">—</div><div class="sub" id="rsaSub">par mois</div></div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Estimation indicative</div><p>Calcul simplifié basé sur le montant forfaitaire 2026 et un forfait logement. Le RSA réel dépend de l'ensemble de vos ressources des 3 derniers mois. Pour une demande officielle, rendez-vous sur <a href="https://www.caf.fr" rel="nofollow noopener" target="_blank">caf.fr</a>.</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Qu'est-ce que le RSA&nbsp;?</h2>
+    <p>Le <strong>revenu de solidarité active (RSA)</strong> garantit un revenu minimum aux personnes sans ressources ou à faibles ressources, à partir de 25 ans (ou avant sous conditions). Son montant correspond à un <strong>montant forfaitaire</strong> (selon la composition du foyer), <strong>diminué de vos ressources</strong> et d'un forfait logement si vous êtes aidé ou hébergé.</p>
+    <p>Si vous travaillez, vous relevez plutôt de la <a href="prime-activite.html">prime d'activité</a>. Pensez aussi à estimer vos <a href="calcul-apl.html">APL</a>.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Peut-on cumuler RSA et salaire&nbsp;?</dt><dd>Temporairement oui, mais au-delà la prime d'activité prend le relais. Le RSA vise les foyers sans ou avec très faibles revenus.</dd>
+      <dt>Le RSA est-il imposable&nbsp;?</dt><dd>Non, le RSA n'est pas imposable.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="prime-activite.html" class="related-card"><span class="kicker">Aides CAF</span><h3>Prime d'activité</h3><p>Pour les travailleurs modestes.</p></a>
+      <a href="calcul-apl.html" class="related-card"><span class="kicker">Aides CAF</span><h3>Estimation APL</h3><p>L'aide au logement.</p></a>
+      <a href="allocations-familiales.html" class="related-card"><span class="kicker">Aides CAF</span><h3>Allocations familiales</h3><p>Dès 2 enfants à charge.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Estimation indicative sans valeur officielle. Référez-vous à la CAF pour vos droits réels.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var situation=document.getElementById('situation').value;
+    var enfants=parseInt(document.getElementById('enfants').value,10)||0;
+    var ressources=parseFloat(document.getElementById('ressources').value)||0;
+    var logement=document.getElementById('logement').checked;
+    var forfait=635.71, facteur=1;
+    if(situation==='couple') facteur+=0.5;
+    for(var i=1;i<=enfants;i++){ facteur += (i<=2)?0.3:0.4; }
+    var forfaitMajore=forfait*facteur;
+    // Forfait logement déduit (≈12% pour 1 pers, 16% pour 2, 16,5% au-delà)
+    var fl=0;
+    if(logement){ var taux=(situation==='couple'||enfants>0)?0.16:0.12; fl=forfait*taux; }
+    var rsa=forfaitMajore - fl - ressources;
+    if(rsa<6) rsa=0;
+    var el=document.getElementById('rsa'),sub=document.getElementById('rsaSub');
+    if(rsa<=0){ el.textContent='0 €'; sub.textContent="D'après cette estimation, vous ne seriez pas éligible au RSA."; }
+    else { el.textContent=eur(rsa)+' / mois'; sub.textContent='montant forfaitaire majoré : '+eur(forfaitMajore); }
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* =========================================================
+   ChiffreClair — Design System éditorial
+   Style "revue financière" : crédibilité, confiance, E-E-A-T.
+   Anti-look-IA : serif Fraunces, palette crème/nuit/or,
+   chiffres en monospace (précision), filets fins, zéro emoji.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --cream:    #FBF8F1;   /* fond principal */
+  --paper:    #FFFFFF;   /* cartes / encadrés */
+  --navy:     #14213D;   /* texte & titres (autorité) */
+  --navy-soft:#3A4A66;   /* texte secondaire */
+  --gold:     #C8962E;   /* accent éditorial */
+  --gold-dk:  #A87A1E;
+  --green:    #1E7A4D;   /* gains / positif */
+  --line:     #E2DBCB;   /* filets sur crème */
+  --line-dk:  rgba(20,33,61,.14);
+  --shadow:   0 2px 18px rgba(20,33,61,.06);
+
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:  'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --mono:  'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--cream);
+  color:var(--navy);
+  line-height:1.65;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px}
+
+/* ---------- Masthead (en-tête type journal) ---------- */
+.masthead{border-bottom:2px solid var(--navy);background:var(--cream)}
+.masthead-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--serif);font-weight:600;font-size:1.7rem;letter-spacing:-.01em;color:var(--navy);text-decoration:none}
+.logo span{color:var(--gold)}
+.logo small{display:block;font-family:var(--sans);font-weight:400;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--navy-soft);margin-top:-2px}
+
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{color:var(--navy);text-decoration:none;font-size:.86rem;font-weight:500;letter-spacing:.02em;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .15s}
+.nav a:hover{border-bottom-color:var(--gold)}
+
+.burger{display:none;background:none;border:none;font-size:1.5rem;color:var(--navy);cursor:pointer}
+
+@media(max-width:780px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;
+       gap:0;border-bottom:2px solid var(--navy);padding:8px 22px 18px;z-index:50}
+  .nav.open{display:flex}
+  .nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+}
+
+/* ---------- Kicker / labels éditoriaux ---------- */
+.kicker{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dk)}
+.rule{height:1px;background:var(--line);border:none;margin:30px 0}
+.rule-gold{height:3px;width:54px;background:var(--gold);border:none;margin:14px 0}
+
+/* ---------- Titres ---------- */
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.18;color:var(--navy);letter-spacing:-.01em}
+h1{font-size:2.6rem;margin:.2em 0 .35em}
+h2{font-size:1.7rem;margin:1.4em 0 .5em}
+h3{font-size:1.2rem;margin:1.2em 0 .4em}
+@media(max-width:600px){h1{font-size:1.95rem}h2{font-size:1.4rem}}
+
+p{margin-bottom:1em;color:var(--navy-soft)}
+.lead{font-size:1.18rem;color:var(--navy);font-weight:400}
+a{color:var(--gold-dk)}
+
+/* ---------- Hero d'accueil ---------- */
+.hero{padding:56px 0 30px;text-align:center}
+.hero h1{max-width:18ch;margin:.2em auto .3em}
+.hero .lead{max-width:60ch;margin:0 auto 8px}
+
+/* ---------- Grille de catégories (cocon) ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0}
+@media(max-width:820px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.cat-grid{grid-template-columns:1fr}}
+.cat{background:var(--cream);padding:26px 22px;text-decoration:none;display:block;transition:background .15s}
+.cat:hover{background:var(--paper)}
+.cat .kicker{display:block;margin-bottom:8px}
+.cat h3{margin:0 0 6px;font-size:1.25rem}
+.cat p{font-size:.92rem;margin:0;color:var(--navy-soft)}
+.cat .arrow{color:var(--gold);font-family:var(--serif);font-weight:600;margin-top:10px;display:inline-block}
+
+/* ---------- Liste d'outils (liens internes) ---------- */
+.tool-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+@media(max-width:600px){.tool-list{grid-template-columns:1fr}}
+.tool-list li{border-bottom:1px solid var(--line)}
+.tool-list a{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;text-decoration:none;color:var(--navy);font-weight:500}
+.tool-list a:hover{color:var(--gold-dk)}
+.tool-list .tag{font-size:.72rem;color:var(--navy-soft);font-weight:400}
+
+/* ---------- Bloc calculateur ---------- */
+.card{background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);padding:28px;margin:22px 0}
+.field{margin-bottom:18px}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:7px;color:var(--navy)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}}
+
+.input-suffix{position:relative}
+input[type=number],input[type=text],select{
+  width:100%;padding:14px 15px;font-family:var(--mono);font-size:1.05rem;
+  border:1.5px solid var(--line-dk);background:#fff;color:var(--navy);transition:border-color .15s}
+input:focus,select:focus{outline:none;border-color:var(--gold)}
+.input-suffix .sfx{position:absolute;right:15px;top:50%;transform:translateY(-50%);color:var(--navy-soft);font-family:var(--mono);pointer-events:none}
+
+input[type=range]{width:100%;accent-color:var(--navy);margin-top:8px}
+.rangeval{display:flex;justify-content:space-between;font-size:.78rem;color:var(--navy-soft);margin-top:3px;font-family:var(--mono)}
+
+.btn{width:100%;background:var(--navy);color:var(--cream);border:none;padding:17px;font-family:var(--sans);
+  font-size:1.05rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:background .15s}
+.btn:hover{background:#0d1830}
+
+/* ---------- Résultats ---------- */
+.result{display:none}
+.result.show{display:block}
+.headline-result{text-align:center;background:var(--navy);color:var(--cream);padding:30px 22px}
+.headline-result .kicker{color:var(--gold)}
+.headline-result .big{font-family:var(--mono);font-weight:600;font-size:2.7rem;margin:8px 0;color:#fff}
+.headline-result .sub{font-size:.95rem;opacity:.85}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1px}
+@media(max-width:520px){.stats{grid-template-columns:1fr}}
+.stat{background:var(--paper);padding:20px;text-align:center}
+.stat .v{font-family:var(--mono);font-size:1.5rem;font-weight:600;color:var(--navy)}
+.stat.green .v{color:var(--green)}
+.stat .k{font-size:.82rem;color:var(--navy-soft);margin-top:3px}
+
+table{width:100%;border-collapse:collapse;font-size:.9rem;font-family:var(--mono)}
+th,td{padding:11px 10px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;font-family:var(--sans)}
+th{background:var(--cream);color:var(--navy-soft);font-weight:600;font-family:var(--sans);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;position:sticky;top:0}
+.table-scroll{max-height:380px;overflow:auto;border:1px solid var(--line)}
+
+/* ---------- Emplacements AdSense ---------- */
+.ad-slot{background:#F3EFE4;border:1px dashed var(--line);color:#A89B7E;text-align:center;
+  padding:20px;margin:26px 0;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+
+/* ---------- Encadré auteur / confiance (E-E-A-T) ---------- */
+.trust{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border-left:3px solid var(--gold);padding:18px 20px;margin:26px 0;font-size:.9rem}
+.trust .who{font-weight:600;color:var(--navy)}
+.trust p{margin:0;font-size:.88rem}
+
+/* ---------- Fil d'Ariane ---------- */
+.crumbs{font-size:.8rem;color:var(--navy-soft);padding:18px 0 0}
+.crumbs a{color:var(--navy-soft);text-decoration:none}
+.crumbs a:hover{color:var(--gold-dk)}
+
+/* ---------- Contenu SEO / FAQ ---------- */
+.prose h2{border-bottom:1px solid var(--line);padding-bottom:6px}
+.faq dt{font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--navy);margin-top:18px}
+.faq dd{color:var(--navy-soft);margin-bottom:6px}
+
+/* ---------- Articles connexes (maillage) ---------- */
+.related{margin-top:30px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:700px){.related-grid{grid-template-columns:1fr}}
+.related-card{background:var(--paper);border:1px solid var(--line);padding:18px;text-decoration:none;display:block;transition:border-color .15s}
+.related-card:hover{border-color:var(--gold)}
+.related-card .kicker{font-size:.66rem}
+.related-card h3{font-size:1.05rem;margin:6px 0 4px}
+.related-card p{font-size:.84rem;margin:0}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy);color:#C9D0DD;margin-top:60px;padding:46px 0 30px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+@media(max-width:700px){footer .wrap{grid-template-columns:1fr}}
+footer .logo{color:#fff}
+footer h4{font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+footer a{color:#C9D0DD;text-decoration:none;display:block;padding:4px 0;font-size:.9rem}
+footer a:hover{color:#fff}
+footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);margin-top:14px;padding-top:18px;font-size:.78rem;color:#8893A6}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salaire Brut en Net 2026 — Calcul instantané (cadre & non-cadre) | ChiffreClair</title>
+<meta name="description" content="Convertissez votre salaire brut en net en 2026 : mensuel, annuel et net après impôt. Calcul gratuit pour cadre et non-cadre, avec le détail des charges salariales.">
+<link rel="canonical" href="https://chiffreclair.fr/salaire-brut-net.html">
+<meta property="og:title" content="Salaire Brut en Net 2026 — ChiffreClair">
+<meta property="og:description" content="Votre salaire net en un clic : mensuel, annuel et après impôt.">
+<link rel="stylesheet" href="assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"WebApplication",
+  "name":"Calculateur salaire brut en net","url":"https://chiffreclair.fr/salaire-brut-net.html",
+  "applicationCategory":"FinanceApplication","operatingSystem":"All",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Comment passer du salaire brut au net ?","acceptedAnswer":{"@type":"Answer","text":"On soustrait les charges salariales du brut : environ 22 % pour un non-cadre et 25 % pour un cadre. Le net imposable sert ensuite de base au prélèvement à la source."}},
+    {"@type":"Question","name":"Quelle différence entre cadre et non-cadre ?","acceptedAnswer":{"@type":"Answer","text":"Le cadre cotise davantage (retraite cadre, APEC), d'où un taux de charges salariales d'environ 25 % contre 22 % pour un non-cadre."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav">
+      <a href="credit.html">Crédit</a>
+      <a href="salaire.html">Salaire</a>
+      <a href="impots.html">Impôts</a>
+      <a href="aides-sociales.html">Aides CAF</a>
+      <a href="epargne.html">Épargne</a>
+      <a href="blog.html">Guides</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <nav class="crumbs">
+    <a href="index.html">Accueil</a> › <a href="salaire.html">Salaire</a> › Brut en net
+  </nav>
+
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Salaire · cadre & non-cadre</span>
+    <h1>Salaire brut en net 2026</h1>
+    <p class="lead">Convertissez votre salaire brut en net mensuel, net annuel et net après impôt, avec le détail des charges salariales.</p>
+  </header>
+
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+
+  <div class="card">
+    <div class="grid2">
+      <div class="field">
+        <label for="brut">Salaire brut</label>
+        <div class="input-suffix">
+          <input type="number" id="brut" value="3000" min="0" step="50">
+          <span class="sfx">€</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="periode">Période</label>
+        <select id="periode">
+          <option value="mois">par mois</option>
+          <option value="an">par an</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="field">
+        <label for="statut">Statut</label>
+        <select id="statut">
+          <option value="0.22">Non-cadre (≈ 22 % de charges)</option>
+          <option value="0.25">Cadre (≈ 25 % de charges)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="tauxImpot">Taux de prélèvement à la source</label>
+        <div class="input-suffix">
+          <input type="number" id="tauxImpot" value="0" min="0" max="45" step="0.1">
+          <span class="sfx">%</span>
+        </div>
+      </div>
+    </div>
+    <button class="btn" id="calcBtn">Calculer mon salaire net</button>
+  </div>
+
+  <div class="result" id="result">
+    <div class="headline-result">
+      <span class="kicker">Net mensuel avant impôt</span>
+      <div class="big" id="netMois">—</div>
+      <div class="sub">soit <span id="netAn">—</span> par an</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v" id="charges">—</div><div class="k">Charges salariales / mois</div></div>
+      <div class="stat green"><div class="v" id="netApresImpot">—</div><div class="k">Net après impôt / mois</div></div>
+    </div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+
+  <div class="trust">
+    <div>
+      <div class="who">Méthode &amp; fiabilité</div>
+      <p>Estimation basée sur les taux moyens de charges salariales 2026 (≈ 22 % non-cadre, ≈ 25 % cadre). Le taux réel varie selon la convention collective, la mutuelle et les primes. Pour un calcul officiel, reportez-vous à votre bulletin de paie.</p>
+    </div>
+  </div>
+
+  <section class="prose" style="margin-top:30px">
+    <h2>Comment passer du salaire brut au net ?</h2>
+    <p>Le salaire <strong>net</strong> correspond au salaire <strong>brut</strong> diminué des <strong>charges salariales</strong> (Sécurité sociale, retraite, chômage, CSG/CRDS). En 2026, ces charges représentent en moyenne <strong>22 % pour un non-cadre</strong> et <strong>25 % pour un cadre</strong>, qui cotise davantage (retraite complémentaire, APEC).</p>
+    <p>Depuis le prélèvement à la source, l'impôt sur le revenu est ensuite retiré directement du net. Pour estimer cet impôt, utilisez notre <a href="calcul-impot-revenu.html">calculateur d'impôt sur le revenu</a>.</p>
+
+    <h2>Brut, net, net imposable, net après impôt : ne pas confondre</h2>
+    <p>Le <strong>net à payer</strong> est ce que vous touchez sur votre compte. Le <strong>net imposable</strong>, légèrement supérieur, sert de base au calcul de l'impôt. Le <strong>net après impôt</strong> est ce qu'il vous reste une fois le prélèvement à la source appliqué.</p>
+
+    <dl class="faq">
+      <h2>Questions fréquentes</h2>
+      <dt>Pourquoi mon net réel diffère-t-il de l'estimation ?</dt>
+      <dd>Les taux varient selon la convention collective, la mutuelle d'entreprise, les tickets restaurant et les primes. Cet outil donne une estimation moyenne.</dd>
+      <dt>Comment connaître mon taux de prélèvement à la source ?</dt>
+      <dd>Il figure sur votre dernier bulletin de paie et dans votre espace personnel sur impots.gouv.fr.</dd>
+    </dl>
+  </section>
+
+  <section class="related">
+    <span class="kicker">À calculer aussi</span>
+    <h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="calcul-impot-revenu.html" class="related-card">
+        <span class="kicker">Impôts</span><h3>Impôt sur le revenu</h3>
+        <p>Estimez votre impôt avec le barème 2026.</p>
+      </a>
+      <a href="calculateur-credit.html" class="related-card">
+        <span class="kicker">Crédit</span><h3>Calculateur de crédit</h3>
+        <p>Quelle mensualité selon votre revenu net ?</p>
+      </a>
+      <a href="prime-activite.html" class="related-card">
+        <span class="kicker">Aides CAF</span><h3>Prime d'activité</h3>
+        <p>Avez-vous droit à un complément de revenu ?</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="index.html" class="logo">Chiffre<span>Clair</span></a>
+      <p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent. Simulateurs gratuits, à jour 2026.</p>
+    </div>
+    <div>
+      <h4>Calculateurs</h4>
+      <a href="credit.html">Crédit & prêt</a>
+      <a href="salaire.html">Salaire & paie</a>
+      <a href="impots.html">Impôts</a>
+      <a href="aides-sociales.html">Aides CAF</a>
+      <a href="epargne.html">Épargne</a>
+    </div>
+    <div>
+      <h4>Le site</h4>
+      <a href="blog.html">Guides</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+    <div class="legal">
+      © 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil financier.
+    </div>
+  </div>
+</footer>
+
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var brut=parseFloat(document.getElementById('brut').value);
+    var periode=document.getElementById('periode').value;
+    var tauxCharges=parseFloat(document.getElementById('statut').value);
+    var tauxImpot=parseFloat(document.getElementById('tauxImpot').value)/100;
+    if(isNaN(brut)||brut<0)return;
+
+    var brutMois = periode==='an' ? brut/12 : brut;
+    var netMois = brutMois*(1-tauxCharges);
+    var chargesMois = brutMois-netMois;
+    var netApres = netMois*(1-(isNaN(tauxImpot)?0:tauxImpot));
+
+    document.getElementById('netMois').textContent=netMois.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+    document.getElementById('netAn').textContent=eur(netMois*12);
+    document.getElementById('charges').textContent=eur(chargesMois);
+    document.getElementById('netApresImpot').textContent=eur(netApres);
+
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

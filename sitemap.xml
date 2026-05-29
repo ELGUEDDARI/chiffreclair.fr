@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://chiffreclair.fr/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <url><loc>https://chiffreclair.fr/credit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chiffreclair.fr/salaire.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chiffreclair.fr/impots.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chiffreclair.fr/aides-sociales.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chiffreclair.fr/epargne.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://chiffreclair.fr/calculateur-credit.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/capacite-emprunt.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/rachat-credit.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/salaire-brut-net.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/calcul-impot-revenu.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/prime-activite.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/calcul-apl.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/calcul-rsa.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/allocations-familiales.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chiffreclair.fr/interets-composes.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <url><loc>https://chiffreclair.fr/blog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chiffreclair.fr/guide-salaire-brut-net.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chiffreclair.fr/guide-prime-activite.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chiffreclair.fr/guide-capacite-emprunt.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chiffreclair.fr/guide-bareme-impot.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chiffreclair.fr/guide-interets-composes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://chiffreclair.fr/a-propos.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://chiffreclair.fr/contact.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

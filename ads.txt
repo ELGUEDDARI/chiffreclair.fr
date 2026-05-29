@@ -1,0 +1,4 @@
+# Fichier ads.txt — Google AdSense
+# Remplacez pub-XXXXXXXXXXXXXXXX par votre identifiant éditeur AdSense (visible dans votre compte AdSense)
+# une fois votre site approuvé.
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

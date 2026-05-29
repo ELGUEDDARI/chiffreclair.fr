@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur d'Intérêts Composés 2026 — Simulez la croissance de votre épargne | ChiffreClair</title>
+<meta name="description" content="Calculez vos intérêts composés 2026 : capital initial, versements mensuels et taux. Visualisez combien votre épargne peut rapporter sur 5, 10 ou 30 ans. Gratuit.">
+<link rel="canonical" href="https://chiffreclair.fr/interets-composes.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur d'intérêts composés","url":"https://chiffreclair.fr/interets-composes.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="epargne.html">Épargne</a> › Intérêts composés</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Épargne · croissance du capital</span>
+    <h1>Calculateur d'intérêts composés</h1>
+    <p class="lead">Visualisez la croissance de votre épargne : capital initial, versements réguliers et effet boule de neige des intérêts.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="initial">Capital initial</label><div class="input-suffix"><input type="number" id="initial" value="5000" min="0" step="100"><span class="sfx">€</span></div></div>
+      <div class="field"><label for="versement">Versement mensuel</label><div class="input-suffix"><input type="number" id="versement" value="150" min="0" step="10"><span class="sfx">€</span></div></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label for="taux">Rendement annuel</label><div class="input-suffix"><input type="number" id="taux" value="4" min="0" step="0.1"><span class="sfx">%</span></div></div>
+      <div class="field"><label for="duree">Durée : <span id="dureeLabel">15 ans</span></label><input type="range" id="duree" min="1" max="40" value="15" step="1"><div class="rangeval"><span>1 an</span><span>40 ans</span></div></div>
+    </div>
+    <button class="btn" id="calcBtn">Calculer mon épargne</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker">Capital final estimé</span><div class="big" id="final">—</div><div class="sub">après <span id="ans">—</span> ans</div></div>
+    <div class="stats"><div class="stat"><div class="v" id="verse">—</div><div class="k">Total versé</div></div><div class="stat green"><div class="v" id="interets">—</div><div class="k">Intérêts gagnés</div></div></div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Calcul à intérêts composés mensuels, rendement supposé constant. Les placements réels (Livret A, assurance-vie, bourse) comportent des variations et parfois une fiscalité. Estimation indicative.</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Les intérêts composés, comment ça marche&nbsp;?</h2>
+    <p>Les <strong>intérêts composés</strong> sont les intérêts que produisent... vos intérêts. Chaque année, vos gains s'ajoutent au capital et génèrent à leur tour des intérêts. Sur 20 ou 30 ans, l'effet est exponentiel : c'est pourquoi <strong>commencer tôt</strong> compte souvent plus que verser de grosses sommes.</p>
+    <p>Avant d'épargner, vérifiez votre <a href="salaire-brut-net.html">revenu net disponible</a>. Et si vous remboursez un prêt, comparez avec notre <a href="calculateur-credit.html">calculateur de crédit</a>.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Quel rendement utiliser&nbsp;?</dt><dd>Livret A autour de 2-3 %, fonds euros d'assurance-vie 2-3,5 %, actions historiquement 6-8 % en moyenne mais avec risque.</dd>
+      <dt>Les intérêts sont-ils imposés&nbsp;?</dt><dd>Le Livret A est exonéré. D'autres placements subissent le prélèvement forfaitaire de 30 % (PFU). Cet outil calcule avant fiscalité.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="salaire-brut-net.html" class="related-card"><span class="kicker">Salaire</span><h3>Salaire brut en net</h3><p>Combien pouvez-vous épargner ?</p></a>
+      <a href="calculateur-credit.html" class="related-card"><span class="kicker">Crédit</span><h3>Calculateur de crédit</h3><p>Rembourser ou épargner ?</p></a>
+      <a href="calcul-impot-revenu.html" class="related-card"><span class="kicker">Impôts</span><h3>Impôt sur le revenu</h3><p>Anticipez la fiscalité de vos gains.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil financier.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  var dureeEl=document.getElementById('duree'),dureeLabel=document.getElementById('dureeLabel');
+  dureeEl.addEventListener('input',function(){dureeLabel.textContent=dureeEl.value+' ans';});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var P=parseFloat(document.getElementById('initial').value)||0;
+    var v=parseFloat(document.getElementById('versement').value)||0;
+    var t=parseFloat(document.getElementById('taux').value)/100;
+    var annees=parseInt(dureeEl.value,10);
+    var n=annees*12,i=t/12,solde=P;
+    for(var m=0;m<n;m++){solde=solde*(1+i)+v;}
+    var verse=P+v*n, interets=solde-verse;
+    document.getElementById('final').textContent=eur(solde);
+    document.getElementById('ans').textContent=annees;
+    document.getElementById('verse').textContent=eur(verse);
+    document.getElementById('interets').textContent='+ '+eur(interets);
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

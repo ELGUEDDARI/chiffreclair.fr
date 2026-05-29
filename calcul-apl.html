@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimation APL 2026 — Calculez votre Aide au Logement CAF | ChiffreClair</title>
+<meta name="description" content="Estimez votre APL 2026 selon votre loyer, vos revenus et votre zone géographique. Simulateur gratuit d'aide personnalisée au logement de la CAF.">
+<link rel="canonical" href="https://chiffreclair.fr/calcul-apl.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Estimation APL","url":"https://chiffreclair.fr/calcul-apl.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="aides-sociales.html">Aides sociales</a> › APL</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Aide CAF · logement</span>
+    <h1>Estimation de votre APL 2026</h1>
+    <p class="lead">Estimez votre aide personnalisée au logement selon votre loyer, vos revenus et votre zone.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="loyer">Loyer mensuel (hors charges)</label><div class="input-suffix"><input type="number" id="loyer" value="600" min="0" step="10"><span class="sfx">€</span></div></div>
+      <div class="field"><label for="revenus">Revenus nets mensuels du foyer</label><div class="input-suffix"><input type="number" id="revenus" value="1200" min="0" step="50"><span class="sfx">€</span></div></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label for="zone">Zone géographique</label><select id="zone"><option value="1">Zone 1 — Paris & proche banlieue</option><option value="2" selected>Zone 2 — grandes agglomérations</option><option value="3">Zone 3 — reste du territoire</option></select></div>
+      <div class="field"><label for="personnes">Personnes dans le foyer</label><input type="number" id="personnes" value="1" min="1" max="10" step="1"></div>
+    </div>
+    <button class="btn" id="calcBtn">Estimer mon APL</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker">Estimation de votre APL</span><div class="big" id="apl">—</div><div class="sub" id="aplSub">par mois</div></div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Estimation très indicative</div><p>Le calcul officiel des APL est complexe (loyer plafond par zone, revenus N-2, participation personnelle, forfait charges). Cet outil fournit une <strong>fourchette indicative</strong> uniquement. Pour un montant fiable, utilisez impérativement le simulateur de la <a href="https://www.caf.fr" rel="nofollow noopener" target="_blank">CAF</a>.</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Qu'est-ce que l'APL&nbsp;?</h2>
+    <p>L'<strong>aide personnalisée au logement (APL)</strong> est versée par la CAF pour réduire le montant du loyer ou de la mensualité d'emprunt. Elle dépend de votre <strong>loyer</strong> (dans la limite d'un plafond selon la zone), de vos <strong>revenus</strong> et de la <strong>composition</strong> de votre foyer. Plus vos revenus sont faibles, plus l'aide est élevée.</p>
+    <p>Si vos ressources sont très basses, vérifiez aussi votre éligibilité au <a href="calcul-rsa.html">RSA</a> et à la <a href="prime-activite.html">prime d'activité</a>.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Les étudiants ont-ils droit à l'APL&nbsp;?</dt><dd>Oui, sous conditions de logement et de ressources, y compris en résidence universitaire conventionnée.</dd>
+      <dt>L'APL est-elle versée au locataire ou au propriétaire&nbsp;?</dt><dd>Souvent directement au bailleur, qui déduit l'aide du loyer ; sinon au locataire.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="prime-activite.html" class="related-card"><span class="kicker">Aides CAF</span><h3>Prime d'activité</h3><p>Complément pour les travailleurs.</p></a>
+      <a href="calcul-rsa.html" class="related-card"><span class="kicker">Aides CAF</span><h3>RSA</h3><p>Le revenu minimum garanti.</p></a>
+      <a href="salaire-brut-net.html" class="related-card"><span class="kicker">Salaire</span><h3>Salaire brut en net</h3><p>Vos revenus nets de référence.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Estimation indicative sans valeur officielle. Référez-vous à la CAF pour vos droits réels.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var loyer=parseFloat(document.getElementById('loyer').value)||0;
+    var revenus=parseFloat(document.getElementById('revenus').value)||0;
+    var zone=parseInt(document.getElementById('zone').value,10);
+    var pers=parseInt(document.getElementById('personnes').value,10)||1;
+    // Loyer plafond indicatif par zone et par personne supplémentaire
+    var plafondBase=[0,350,305,285][zone];
+    var plafond=plafondBase*(1+0.15*(pers-1));
+    var loyerRetenu=Math.min(loyer,plafond);
+    // Participation personnelle indicative selon revenus
+    var participation=Math.max(0,(revenus-(550+250*(pers-1)))*0.30);
+    var apl=loyerRetenu-participation;
+    if(apl<10) apl=0;
+    var el=document.getElementById('apl'),sub=document.getElementById('aplSub');
+    if(apl<=0){ el.textContent='0 €'; sub.textContent="D'après cette estimation, votre APL serait nulle ou très faible."; }
+    else { el.textContent=eur(apl)+' / mois'; sub.textContent='fourchette indicative — vérifiez sur caf.fr'; }
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

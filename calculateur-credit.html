@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur de Crédit 2026 — Mensualité, Coût Total & Amortissement | ChiffreClair</title>
+<meta name="description" content="Calculez gratuitement la mensualité de votre crédit (immobilier, auto, conso) : montant, durée, taux. Coût total, intérêts et tableau d'amortissement complet. À jour 2026.">
+<link rel="canonical" href="https://chiffreclair.fr/calculateur-credit.html">
+<meta property="og:title" content="Calculateur de Crédit 2026 — ChiffreClair">
+<meta property="og:description" content="Mensualité, coût total et tableau d'amortissement de votre crédit, gratuitement.">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- Données structurées : OUTIL (résiste aux AI Overviews) + FAQ (rich snippets) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Calculateur de Crédit",
+  "url":"https://chiffreclair.fr/calculateur-credit.html",
+  "applicationCategory":"FinanceApplication",
+  "operatingSystem":"All",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Comment calculer la mensualité d'un crédit ?","acceptedAnswer":{"@type":"Answer","text":"La mensualité se calcule avec la formule M = C × (t/12) / (1 − (1 + t/12)^−n), où C est le capital emprunté, t le taux annuel et n le nombre de mensualités."}},
+    {"@type":"Question","name":"Le TAEG inclut-il l'assurance emprunteur ?","acceptedAnswer":{"@type":"Answer","text":"Le TAEG inclut les intérêts et frais obligatoires. L'assurance emprunteur peut s'y ajouter selon les contrats."}},
+    {"@type":"Question","name":"Ce calculateur est-il gratuit ?","acceptedAnswer":{"@type":"Answer","text":"Oui, totalement gratuit et sans inscription. Les résultats sont indicatifs."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav">
+      <a href="credit.html">Crédit</a>
+      <a href="salaire.html">Salaire</a>
+      <a href="impots.html">Impôts</a>
+      <a href="aides-sociales.html">Aides CAF</a>
+      <a href="epargne.html">Épargne</a>
+      <a href="blog.html">Guides</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow">
+  <nav class="crumbs">
+    <a href="index.html">Accueil</a> › <a href="credit.html">Crédit</a> › Calculateur de crédit
+  </nav>
+
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Crédit immobilier · auto · consommation</span>
+    <h1>Calculateur de crédit 2026</h1>
+    <p class="lead">Estimez votre mensualité, le coût total et les intérêts de votre prêt — avec le tableau d'amortissement détaillé.</p>
+  </header>
+
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+
+  <!-- ===== Calculateur ===== -->
+  <div class="card">
+    <div class="grid2">
+      <div class="field">
+        <label for="montant">Montant emprunté</label>
+        <div class="input-suffix">
+          <input type="number" id="montant" value="150000" min="500" step="500">
+          <span class="sfx">€</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="taux">Taux annuel (TAEG)</label>
+        <div class="input-suffix">
+          <input type="number" id="taux" value="3.5" min="0" step="0.05">
+          <span class="sfx">%</span>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label for="duree">Durée du remboursement : <span id="dureeLabel">20 ans</span></label>
+      <input type="range" id="duree" min="1" max="30" value="20" step="1">
+      <div class="rangeval"><span>1 an</span><span>30 ans</span></div>
+    </div>
+    <button class="btn" id="calcBtn">Calculer ma mensualité</button>
+  </div>
+
+  <!-- ===== Résultats ===== -->
+  <div class="result" id="result">
+    <div class="headline-result">
+      <span class="kicker">Votre mensualité</span>
+      <div class="big" id="mensualite">—</div>
+      <div class="sub">pendant <span id="nbMois">—</span> mois</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="v" id="totalRembourse">—</div><div class="k">Total remboursé</div></div>
+      <div class="stat green"><div class="v" id="totalInterets">—</div><div class="k">Coût des intérêts</div></div>
+    </div>
+
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+
+    <div class="card">
+      <h2 style="margin-top:0">Tableau d'amortissement annuel</h2>
+      <p style="font-size:.9rem">Répartition capital / intérêts, année par année.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Année</th><th>Capital remboursé</th><th>Intérêts</th><th>Capital restant</th></tr></thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Encadré confiance (E-E-A-T) ===== -->
+  <div class="trust">
+    <div>
+      <div class="who">Méthode &amp; fiabilité</div>
+      <p>Ce calculateur applique la formule d'amortissement constant utilisée par les banques françaises. Les résultats sont indicatifs et n'incluent pas l'assurance emprunteur ni les frais de dossier, qui varient selon les organismes.</p>
+    </div>
+  </div>
+
+  <!-- ===== Contenu SEO ===== -->
+  <section class="prose" style="margin-top:30px">
+    <h2>Comment calculer la mensualité d'un crédit ?</h2>
+    <p>La mensualité d'un prêt à taux fixe dépend de trois éléments : le <strong>montant emprunté</strong>, le <strong>taux d'intérêt annuel</strong> et la <strong>durée</strong>. La formule bancaire est : <em>M = C × (t/12) / (1 − (1 + t/12)<sup>−n</sup>)</em>, où C est le capital, t le taux annuel et n le nombre de mensualités. Notre outil l'applique instantanément et y ajoute le coût total et le tableau d'amortissement.</p>
+
+    <h2>Crédit immobilier, auto ou consommation : quelles différences ?</h2>
+    <p>Le calcul est identique ; seuls les taux et durées changent. Un <strong>crédit immobilier</strong> court sur 15 à 25 ans à taux bas. Un <strong>crédit auto</strong> dure 3 à 7 ans. Un <strong>crédit consommation</strong> est plus court mais à taux plus élevé. Pour savoir combien vous pouvez emprunter, utilisez notre <a href="capacite-emprunt.html">calculateur de capacité d'emprunt</a>.</p>
+
+    <dl class="faq">
+      <h2>Questions fréquentes</h2>
+      <dt>Le TAEG inclut-il l'assurance emprunteur ?</dt>
+      <dd>Le TAEG inclut les intérêts et frais obligatoires. L'assurance emprunteur peut s'y ajouter selon les contrats — vérifiez auprès de votre banque.</dd>
+      <dt>Puis-je rembourser par anticipation ?</dt>
+      <dd>Oui, mais des indemnités peuvent s'appliquer (plafonnées par la loi pour l'immobilier). Comparez avec notre <a href="rachat-credit.html">simulateur de rachat de crédit</a>.</dd>
+      <dt>Ce calculateur est-il gratuit ?</dt>
+      <dd>Oui, totalement gratuit et sans inscription. Les résultats sont fournis à titre indicatif.</dd>
+    </dl>
+  </section>
+
+  <!-- ===== Maillage interne : outils connexes ===== -->
+  <section class="related">
+    <span class="kicker">À calculer aussi</span>
+    <h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="capacite-emprunt.html" class="related-card">
+        <span class="kicker">Crédit</span><h3>Capacité d'emprunt</h3>
+        <p>Combien pouvez-vous emprunter selon vos revenus ?</p>
+      </a>
+      <a href="rachat-credit.html" class="related-card">
+        <span class="kicker">Crédit</span><h3>Rachat de crédit</h3>
+        <p>Regroupez vos prêts et estimez vos économies.</p>
+      </a>
+      <a href="salaire-brut-net.html" class="related-card">
+        <span class="kicker">Salaire</span><h3>Salaire brut en net</h3>
+        <p>Vérifiez votre revenu réel avant de vous endetter.</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="index.html" class="logo">Chiffre<span>Clair</span></a>
+      <p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent. Simulateurs gratuits, à jour 2026.</p>
+    </div>
+    <div>
+      <h4>Calculateurs</h4>
+      <a href="credit.html">Crédit & prêt</a>
+      <a href="salaire.html">Salaire & paie</a>
+      <a href="impots.html">Impôts</a>
+      <a href="aides-sociales.html">Aides CAF</a>
+      <a href="epargne.html">Épargne</a>
+    </div>
+    <div>
+      <h4>Le site</h4>
+      <a href="blog.html">Guides</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+    <div class="legal">
+      © 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil financier.
+    </div>
+  </div>
+</footer>
+
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+
+  var dureeEl=document.getElementById('duree'),dureeLabel=document.getElementById('dureeLabel');
+  dureeEl.addEventListener('input',function(){dureeLabel.textContent=dureeEl.value+(dureeEl.value==1?' an':' ans');});
+
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var C=parseFloat(document.getElementById('montant').value);
+    var t=parseFloat(document.getElementById('taux').value)/100;
+    var annees=parseInt(dureeEl.value,10);
+    if(isNaN(C)||C<=0||isNaN(t)||t<0||isNaN(annees))return;
+
+    var n=annees*12, i=t/12, M;
+    M = (i===0) ? C/n : C*i/(1-Math.pow(1+i,-n));
+    var total=M*n, interets=total-C;
+
+    document.getElementById('mensualite').textContent=M.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:2});
+    document.getElementById('nbMois').textContent=n;
+    document.getElementById('totalRembourse').textContent=eur(total);
+    document.getElementById('totalInterets').textContent=eur(interets);
+
+    var body=document.getElementById('amortBody'); body.innerHTML='';
+    var reste=C;
+    for(var an=1;an<=annees;an++){
+      var capAn=0,intAn=0;
+      for(var m=0;m<12;m++){var intM=reste*i,capM=M-intM;reste-=capM;capAn+=capM;intAn+=intM;}
+      if(reste<0.01)reste=0;
+      body.insertAdjacentHTML('beforeend','<tr><td>'+an+'</td><td>'+eur(capAn)+'</td><td>'+eur(intAn)+'</td><td>'+eur(reste)+'</td></tr>');
+    }
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>
