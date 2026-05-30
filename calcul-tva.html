@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcul TVA 2026 — Convertir HT en TTC et TTC en HT | ChiffreClair</title>
+<meta name="description" content="Calculez la TVA 2026 dans les deux sens : du HT au TTC ou du TTC au HT. Tous les taux (20 %, 10 %, 5,5 %, 2,1 %). Outil gratuit pour pros et particuliers.">
+<link rel="canonical" href="https://chiffreclair.fr/calcul-tva.html">
+<meta property="og:title" content="Calcul TVA 2026 — ChiffreClair">
+<meta property="og:description" content="Convertissez HT en TTC et TTC en HT instantanément, tous taux de TVA.">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calcul TVA","url":"https://chiffreclair.fr/calcul-tva.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="impots.html">Impôts</a> › Calcul TVA</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Fiscalité · HT ⇄ TTC</span>
+    <h1>Calcul de la TVA 2026</h1>
+    <p class="lead">Convertissez un montant hors taxes en TTC, ou un montant TTC en hors taxes, avec tous les taux de TVA français.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="montant">Montant</label><div class="input-suffix"><input type="number" id="montant" value="100" min="0" step="1"><span class="sfx">€</span></div></div>
+      <div class="field"><label for="sens">Type de montant saisi</label><select id="sens"><option value="ht">Montant HT (calculer le TTC)</option><option value="ttc">Montant TTC (calculer le HT)</option></select></div>
+    </div>
+    <div class="field"><label for="taux">Taux de TVA</label><select id="taux">
+      <option value="20">20 % — taux normal</option>
+      <option value="10">10 % — restauration, travaux, transport</option>
+      <option value="5.5">5,5 % — alimentation, livres, énergie</option>
+      <option value="2.1">2,1 % — médicaments, presse</option>
+    </select></div>
+    <button class="btn" id="calcBtn">Calculer la TVA</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker" id="resLabel">Montant TTC</span><div class="big" id="principal">—</div><div class="sub">TVA : <span id="tva">—</span></div></div>
+    <div class="stats">
+      <div class="stat"><div class="v" id="ht">—</div><div class="k">Montant HT</div></div>
+      <div class="stat"><div class="v" id="ttc">—</div><div class="k">Montant TTC</div></div>
+    </div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>TVA = montant HT × taux. Le TTC = HT + TVA. À l'inverse, HT = TTC ÷ (1 + taux). Tous les taux en vigueur en France métropolitaine sont proposés (des taux spécifiques s'appliquent en Corse et outre-mer).</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Comment calculer la TVA ?</h2>
+    <p>Pour passer du <strong>HT au TTC</strong> : multipliez le montant hors taxes par (1 + taux). Pour un taux de 20 %, un montant HT de 100 € devient 120 € TTC. Pour passer du <strong>TTC au HT</strong> : divisez par (1 + taux). 120 € TTC redonnent 100 € HT, soit 20 € de TVA.</p>
+    <h2>Quels sont les taux de TVA en 2026 ?</h2>
+    <p>Quatre taux coexistent : <strong>20 %</strong> (normal, la majorité des biens et services), <strong>10 %</strong> (restauration, travaux de rénovation, transport), <strong>5,5 %</strong> (produits alimentaires, livres, énergie) et <strong>2,1 %</strong> (médicaments remboursables, presse). Si vous êtes auto-entrepreneur, vérifiez vos <a href="cotisations-auto-entrepreneur.html">cotisations</a> et votre seuil de franchise de TVA.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Un auto-entrepreneur facture-t-il la TVA ?</dt><dd>Pas tant qu'il reste sous les seuils de franchise. Au-delà, il doit facturer la TVA et la reverser.</dd>
+      <dt>Quel taux pour des travaux ?</dt><dd>10 % pour la rénovation classique, 5,5 % pour les travaux d'amélioration énergétique, sous conditions.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="cotisations-auto-entrepreneur.html" class="related-card"><span class="kicker">Salaire</span><h3>Cotisations auto-entrepreneur</h3><p>Vos charges URSSAF.</p></a>
+      <a href="calcul-impot-revenu.html" class="related-card"><span class="kicker">Impôts</span><h3>Impôt sur le revenu</h3><p>Le barème 2026.</p></a>
+      <a href="salaire-brut-net.html" class="related-card"><span class="kicker">Salaire</span><h3>Salaire brut en net</h3><p>Du brut au net.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil fiscal.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:2});}
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var m=parseFloat(document.getElementById('montant').value);
+    var sens=document.getElementById('sens').value;
+    var taux=parseFloat(document.getElementById('taux').value)/100;
+    if(isNaN(m)||m<0)return;
+    var ht,ttc,tva;
+    if(sens==='ht'){ ht=m; ttc=m*(1+taux); }
+    else { ttc=m; ht=m/(1+taux); }
+    tva=ttc-ht;
+    document.getElementById('resLabel').textContent = sens==='ht' ? 'Montant TTC' : 'Montant HT';
+    document.getElementById('principal').textContent = eur(sens==='ht'?ttc:ht);
+    document.getElementById('tva').textContent=eur(tva);
+    document.getElementById('ht').textContent=eur(ht);
+    document.getElementById('ttc').textContent=eur(ttc);
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

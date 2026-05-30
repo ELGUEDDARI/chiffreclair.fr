@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcul Cotisations Auto-Entrepreneur 2026 — Charges URSSAF & revenu net | ChiffreClair</title>
+<meta name="description" content="Calculez vos cotisations URSSAF d'auto-entrepreneur 2026 selon votre chiffre d'affaires et votre activité. Estimez vos charges et votre revenu net. Gratuit.">
+<link rel="canonical" href="https://chiffreclair.fr/cotisations-auto-entrepreneur.html">
+<meta property="og:title" content="Cotisations Auto-Entrepreneur 2026 — ChiffreClair">
+<meta property="og:description" content="Vos charges URSSAF et votre revenu net d'auto-entrepreneur en un clic.">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calcul cotisations auto-entrepreneur","url":"https://chiffreclair.fr/cotisations-auto-entrepreneur.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Quel pourcentage de cotisations pour un auto-entrepreneur ?","acceptedAnswer":{"@type":"Answer","text":"Environ 12,3 % du chiffre d'affaires pour la vente de marchandises, 21,2 % pour les prestations de services commerciales ou artisanales, et 24,6 % pour les professions libérales."}},
+{"@type":"Question","name":"Les cotisations se calculent-elles sur le bénéfice ?","acceptedAnswer":{"@type":"Answer","text":"Non, elles se calculent sur le chiffre d'affaires encaissé, pas sur le bénéfice. Sans CA, aucune cotisation n'est due."}}]}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="salaire.html">Salaire</a> › Cotisations auto-entrepreneur</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Revenus · micro-entreprise</span>
+    <h1>Calcul des cotisations auto-entrepreneur 2026</h1>
+    <p class="lead">Estimez vos cotisations URSSAF et votre revenu net à partir de votre chiffre d'affaires et de votre type d'activité.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="ca">Chiffre d'affaires</label><div class="input-suffix"><input type="number" id="ca" value="3000" min="0" step="100"><span class="sfx">€</span></div></div>
+      <div class="field"><label for="periode">Période</label><select id="periode"><option value="mois">par mois</option><option value="an">par an</option></select></div>
+    </div>
+    <div class="field"><label for="activite">Type d'activité</label><select id="activite">
+      <option value="0.123">Vente de marchandises (BIC) — 12,3 %</option>
+      <option value="0.212" selected>Prestations de services commerciales/artisanales — 21,2 %</option>
+      <option value="0.246">Profession libérale (BNC) — 24,6 %</option>
+    </select></div>
+    <label style="font-weight:400;font-size:.85rem;color:var(--navy-soft)"><input type="checkbox" id="vl" style="width:auto;display:inline"> J'ai opté pour le versement libératoire de l'impôt</label>
+    <button class="btn" id="calcBtn" style="margin-top:14px">Calculer mes cotisations</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker">Revenu net estimé (après charges)</span><div class="big" id="net">—</div><div class="sub" id="netSub">par mois</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v" id="cotisations">—</div><div class="k">Cotisations URSSAF</div></div>
+      <div class="stat" id="vlBox" style="display:none"><div class="v" id="impotVL">—</div><div class="k">Impôt (versement libératoire)</div></div>
+    </div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Taux URSSAF 2026 indicatifs : 12,3 % (vente), 21,2 % (services BIC), 24,6 % (libéral BNC). Le versement libératoire ajoute 1 % (vente), 1,7 % (services) ou 2,2 % (BNC). La contribution à la formation professionnelle (~0,1-0,3 %) n'est pas détaillée ici. Cotisations calculées sur le CA encaissé.</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Comment sont calculées les cotisations d'un auto-entrepreneur ?</h2>
+    <p>Les cotisations sociales se calculent sur le <strong>chiffre d'affaires encaissé</strong> (et non sur le bénéfice), en appliquant un <strong>taux fixe selon l'activité</strong>. Pas de CA, pas de cotisation. C'est la grande simplicité du régime micro-entrepreneur.</p>
+    <h2>Faut-il opter pour le versement libératoire ?</h2>
+    <p>Le <strong>versement libératoire</strong> permet de payer l'impôt sur le revenu en même temps que les cotisations, à un taux faible. Il est intéressant si vous êtes imposable, mais inutile si vous ne payez pas d'impôt. Comparez avec le <a href="calcul-impot-revenu.html">calcul classique de l'impôt</a>. Pour facturer, voyez aussi le <a href="calcul-tva.html">calcul de la TVA</a>.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Les cotisations ouvrent-elles des droits ?</dt><dd>Oui : retraite, maladie, et indemnités selon les seuils. Sans CA, pas de cotisation mais pas de droits non plus.</dd>
+      <dt>À quelle fréquence déclarer ?</dt><dd>Mensuellement ou trimestriellement, selon votre choix, sur le site de l'URSSAF auto-entrepreneur.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="calcul-tva.html" class="related-card"><span class="kicker">Impôts</span><h3>Calcul TVA</h3><p>HT, TTC et franchise.</p></a>
+      <a href="calcul-impot-revenu.html" class="related-card"><span class="kicker">Impôts</span><h3>Impôt sur le revenu</h3><p>Versement libératoire ou non ?</p></a>
+      <a href="interets-composes.html" class="related-card"><span class="kicker">Épargne</span><h3>Intérêts composés</h3><p>Faites fructifier vos bénéfices.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil fiscal.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var ca=parseFloat(document.getElementById('ca').value);
+    var periode=document.getElementById('periode').value;
+    var taux=parseFloat(document.getElementById('activite').value);
+    var vl=document.getElementById('vl').checked;
+    if(isNaN(ca)||ca<0)return;
+    var caMois = periode==='an' ? ca/12 : ca;
+    var cot=caMois*taux;
+    // Taux versement liberatoire selon activite
+    var tvl = taux===0.123?0.01:(taux===0.212?0.017:0.022);
+    var impot = vl ? caMois*tvl : 0;
+    var net = caMois - cot - impot;
+    document.getElementById('net').textContent=eur(net)+' / mois';
+    document.getElementById('netSub').textContent='sur un CA de '+eur(caMois)+' / mois';
+    document.getElementById('cotisations').textContent=eur(cot);
+    var vlBox=document.getElementById('vlBox');
+    if(vl){ vlBox.style.display=''; document.getElementById('impotVL').textContent=eur(impot); } else { vlBox.style.display='none'; }
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>

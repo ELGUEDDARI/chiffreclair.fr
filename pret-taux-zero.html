@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulateur PTZ 2026 — Prêt à Taux Zéro, montant estimé | ChiffreClair</title>
+<meta name="description" content="Estimez votre prêt à taux zéro (PTZ) 2026 selon votre zone, la taille de votre foyer et le coût de l'opération. Simulateur gratuit pour votre achat immobilier.">
+<link rel="canonical" href="https://chiffreclair.fr/pret-taux-zero.html">
+<meta property="og:title" content="Simulateur PTZ 2026 — ChiffreClair">
+<meta property="og:description" content="Estimez le montant de votre prêt à taux zéro pour votre achat.">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Simulateur PTZ","url":"https://chiffreclair.fr/pret-taux-zero.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="credit.html">Crédit</a> › Prêt à taux zéro</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Crédit · achat immobilier aidé</span>
+    <h1>Simulateur de prêt à taux zéro (PTZ) 2026</h1>
+    <p class="lead">Estimez le montant du PTZ auquel vous pourriez prétendre selon votre zone, votre foyer et le coût de votre projet.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="cout">Coût total de l'opération</label><div class="input-suffix"><input type="number" id="cout" value="220000" min="1000" step="1000"><span class="sfx">€</span></div></div>
+      <div class="field"><label for="personnes">Personnes dans le foyer</label><input type="number" id="personnes" value="3" min="1" max="8" step="1"></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label for="zone">Zone géographique</label><select id="zone">
+        <option value="A">Zone A — Paris, Côte d'Azur, Genevois</option>
+        <option value="B1" selected>Zone B1 — grandes agglomérations</option>
+        <option value="B2">Zone B2 — villes moyennes</option>
+        <option value="C">Zone C — reste du territoire</option>
+      </select></div>
+      <div class="field"><label for="quotite">Quotité (selon vos revenus)</label><select id="quotite">
+        <option value="0.5">Revenus modestes — jusqu'à 50 %</option>
+        <option value="0.4" selected>Revenus intermédiaires — 40 %</option>
+        <option value="0.2">Revenus plus élevés — 20 %</option>
+      </select></div>
+    </div>
+    <button class="btn" id="calcBtn">Estimer mon PTZ</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker">Montant de PTZ estimé</span><div class="big" id="ptz">—</div><div class="sub" id="ptzSub">prêt sans intérêts</div></div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Estimation indicative</div><p>Le PTZ dépend de plafonds de revenus, de la zone, du type de bien et de la composition du foyer, avec des règles révisées en 2026. Cet outil donne une <strong>estimation simplifiée</strong>. Pour un montant officiel, utilisez le simulateur de l'<a href="https://www.service-public.fr" rel="nofollow noopener" target="_blank">administration</a> ou consultez votre banque.</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Qu'est-ce que le prêt à taux zéro ?</h2>
+    <p>Le <strong>PTZ</strong> est un prêt aidé par l'État, <strong>sans intérêts</strong>, destiné à financer une partie de l'achat d'une résidence principale pour les <strong>primo-accédants</strong> (sous conditions de revenus). Il vient en complément d'un prêt principal : il ne finance jamais la totalité de l'achat.</p>
+    <h2>Comment est calculé son montant ?</h2>
+    <p>Le montant = <strong>coût de l'opération</strong> (dans la limite d'un plafond selon la zone et la taille du foyer) × une <strong>quotité</strong> (de 20 % à 50 %) qui dépend de vos revenus. Combinez ce PTZ avec notre <a href="calculateur-credit.html">calculateur de crédit</a> pour votre prêt principal, et n'oubliez pas les <a href="frais-notaire.html">frais de notaire</a>.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Qui peut bénéficier du PTZ ?</dt><dd>Les primo-accédants (ne pas avoir été propriétaire de sa résidence principale durant les 2 dernières années), sous plafonds de revenus.</dd>
+      <dt>Le PTZ finance-t-il tout l'achat ?</dt><dd>Non, il complète un prêt principal. Sa quotité est plafonnée selon votre situation.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
+    <div class="related-grid">
+      <a href="calculateur-credit.html" class="related-card"><span class="kicker">Crédit</span><h3>Calculateur de crédit</h3><p>Votre prêt principal.</p></a>
+      <a href="frais-notaire.html" class="related-card"><span class="kicker">Crédit</span><h3>Frais de notaire</h3><p>À ajouter au budget.</p></a>
+      <a href="capacite-emprunt.html" class="related-card"><span class="kicker">Crédit</span><h3>Capacité d'emprunt</h3><p>Votre budget total.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Estimation indicative sans valeur officielle. Vérifiez auprès de votre banque.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  // Plafonds de l'operation retenue (indicatifs 2026) par zone et nb de personnes
+  var plaf={
+    A:[150000,210000,255000,300000,345000],
+    B1:[135000,189000,230000,270000,311000],
+    B2:[110000,154000,187000,220000,253000],
+    C:[100000,140000,170000,200000,230000]
+  };
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var cout=parseFloat(document.getElementById('cout').value);
+    var pers=parseInt(document.getElementById('personnes').value,10)||1;
+    var zone=document.getElementById('zone').value;
+    var q=parseFloat(document.getElementById('quotite').value);
+    if(isNaN(cout)||cout<=0)return;
+    var idx=Math.min(pers,5)-1;
+    var plafond=plaf[zone][idx];
+    var assiette=Math.min(cout,plafond);
+    var ptz=assiette*q;
+    document.getElementById('ptz').textContent=eur(ptz);
+    document.getElementById('ptzSub').textContent='soit '+(ptz/cout*100).toFixed(0)+' % de votre opération financés sans intérêts';
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>
