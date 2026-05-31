@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcul rendement locatif 2026 : brut, net et rentabilité</title>
+<meta name="description" content="Calculez le rendement locatif de votre investissement 2026 : rentabilité brute et nette selon le prix, le loyer et les charges. Gratuit, avec explication.">
+<link rel="canonical" href="https://chiffreclair.fr/rendement-locatif.html">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur de rendement locatif","url":"https://chiffreclair.fr/rendement-locatif.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Comment calcule-t-on le rendement locatif ?","acceptedAnswer":{"@type":"Answer","text":"Le rendement brut = (loyer annuel ÷ prix d'achat) × 100. Le rendement net déduit d'abord les charges (taxe foncière, gestion, assurance, copropriété) : (loyer annuel − charges) ÷ prix × 100."}},
+{"@type":"Question","name":"Qu'est-ce qu'un bon rendement locatif ?","acceptedAnswer":{"@type":"Answer","text":"En 2026, un rendement brut de 5 à 7 % est courant, mais c'est le rendement net (souvent 3 à 5 %) qui compte vraiment, et le net-net après impôt qui décide de la rentabilité réelle."}},
+{"@type":"Question","name":"Le rendement brut suffit-il pour décider ?","acceptedAnswer":{"@type":"Answer","text":"Non. Le brut ignore les charges et la fiscalité, qui peuvent réduire la rentabilité de moitié. Regardez toujours le net, puis le net-net selon votre régime (LMNP, micro-foncier, réel)."}}]}
+</script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="logo">Chiffre<span>Clair</span><small>Calculateurs & simulateurs</small></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">≡</button>
+    <nav class="nav" id="nav"><a href="credit.html">Crédit</a><a href="salaire.html">Salaire</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a><a href="blog.html">Guides</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <nav class="crumbs"><a href="index.html">Accueil</a> › <a href="credit.html">Crédit</a> › Rendement locatif</nav>
+  <header style="margin:14px 0 6px">
+    <span class="kicker">Investissement immobilier · LMNP</span>
+    <h1>Calculateur de rendement locatif</h1>
+    <p class="lead">Avant d'investir, une question décide de tout : ce bien rapporte-t-il vraiment ? Calculez la rentabilité brute, puis la vraie — la nette, charges déduites.</p>
+  </header>
+  <div class="ad-slot">Emplacement publicité — bannière haute</div>
+  <div class="card">
+    <div class="grid2">
+      <div class="field"><label for="prix">Prix d'achat (frais inclus)</label><div class="input-suffix"><input type="number" id="prix" value="200000" min="1000" step="1000"><span class="sfx">€</span></div></div>
+      <div class="field"><label for="loyer">Loyer mensuel (hors charges)</label><div class="input-suffix"><input type="number" id="loyer" value="750" min="0" step="10"><span class="sfx">€</span></div></div>
+    </div>
+    <div class="field"><label for="charges">Charges annuelles (taxe foncière, gestion, assurance, copropriété…)</label><div class="input-suffix"><input type="number" id="charges" value="2000" min="0" step="100"><span class="sfx">€</span></div></div>
+    <button class="btn" id="calcBtn">Calculer la rentabilité</button>
+  </div>
+  <div class="result" id="result">
+    <div class="headline-result"><span class="kicker">Rendement net (charges déduites)</span><div class="big" id="net">—</div><div class="sub" id="netSub">rendement brut : —</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v" id="loyerAn">—</div><div class="k">Loyer annuel</div></div>
+      <div class="stat green"><div class="v" id="revenuNet">—</div><div class="k">Revenu net annuel</div></div>
+    </div>
+    <div class="ad-slot">Emplacement publicité — rectangle 300×250</div>
+  </div>
+  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Rendement brut = loyer annuel ÷ prix d'achat. Rendement net = (loyer annuel − charges) ÷ prix. Le calcul n'inclut pas la <strong>fiscalité</strong> (LMNP, micro-foncier ou réel), qui détermine le rendement « net-net ». Estimation indicative pour comparer des biens.</p></div></div>
+  <section class="prose" style="margin-top:30px">
+    <h2>Brut, net, net-net : ne pas s'arrêter au premier chiffre</h2>
+    <p>Le <strong>rendement brut</strong> est celui qu'affichent les annonces : loyer annuel divisé par le prix. Il est flatteur mais trompeur, car il ignore les charges. Le <strong>rendement net</strong> déduit la taxe foncière, les frais de gestion, l'assurance et les charges de copropriété — il est souvent <strong>1,5 à 2 points plus bas</strong>. Enfin, le <strong>net-net</strong> tient compte de l'impôt selon votre régime.</p>
+    <h2>Qu'est-ce qu'un bon rendement en 2026 ?</h2>
+    <p>Un brut de <strong>5 à 7 %</strong> est courant ; en dessous de 4 % net, l'opération vit surtout sur l'espoir d'une plus-value. Les petites surfaces et certaines villes moyennes offrent les meilleurs rendements, mais avec plus de vacance et de gestion.</p>
+    <p>Pensez au financement : vérifiez votre <a href="capacite-emprunt.html">capacité d'emprunt</a> et la <a href="calculateur-credit.html">mensualité du crédit</a>, car l'effet de levier change tout. Et à la revente, anticipez la <a href="guide-plus-value-immobiliere.html">plus-value immobilière</a>.</p>
+    <dl class="faq"><h2>Questions fréquentes</h2>
+      <dt>Faut-il inclure les frais de notaire dans le prix&nbsp;?</dt><dd>Oui, pour un calcul honnête : le rendement se calcule sur le coût total de l'opération, frais inclus.</dd>
+      <dt>Le statut LMNP améliore-t-il le rendement&nbsp;?</dt><dd>Souvent oui : l'amortissement en LMNP réduit fortement l'impôt sur les loyers, donc améliore le net-net.</dd>
+    </dl>
+  </section>
+  <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs &amp; guides liés</h2>
+    <div class="related-grid">
+      <a href="capacite-emprunt.html" class="related-card"><span class="kicker">Outil</span><h3>Capacité d'emprunt</h3><p>Financer votre investissement.</p></a>
+      <a href="calculateur-credit.html" class="related-card"><span class="kicker">Outil</span><h3>Calculateur de crédit</h3><p>La mensualité de votre prêt.</p></a>
+      <a href="guide-plus-value-immobiliere.html" class="related-card"><span class="kicker">Guide</span><h3>Plus-value immobilière</h3><p>L'impôt à la revente.</p></a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><a href="index.html" class="logo">Chiffre<span>Clair</span></a><p style="color:#8893A6;margin-top:12px;font-size:.88rem;max-width:34ch">Des chiffres clairs pour vos décisions d'argent.</p><p style="color:#8893A6;margin-top:8px;font-size:.8rem;max-width:40ch">Contenu rédigé et vérifié par <a href="a-propos.html" style="color:#8893A6;text-decoration:underline">la rédaction ChiffreClair</a> · mis à jour en 2026.</p></div>
+    <div><h4>Calculateurs</h4><a href="credit.html">Crédit & prêt</a><a href="salaire.html">Salaire & paie</a><a href="impots.html">Impôts</a><a href="aides-sociales.html">Aides CAF</a><a href="epargne.html">Épargne</a></div>
+    <div><h4>Le site</h4><a href="blog.html">Guides</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="mentions-legales.html">Mentions légales</a></div>
+    <div class="legal">© 2026 ChiffreClair — Les calculs sont fournis à titre informatif et ne constituent pas un conseil financier.</div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
+  function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  function pct(n){return n.toLocaleString('fr-FR',{maximumFractionDigits:2})+' %';}
+  document.getElementById('calcBtn').addEventListener('click',function(){
+    var prix=parseFloat(document.getElementById('prix').value)||0;
+    var loyer=parseFloat(document.getElementById('loyer').value)||0;
+    var charges=parseFloat(document.getElementById('charges').value)||0;
+    if(prix<=0)return;
+    var loyerAn=loyer*12;
+    var revenuNet=loyerAn-charges;
+    var brut=loyerAn/prix*100;
+    var net=revenuNet/prix*100;
+    document.getElementById('net').textContent=pct(net);
+    document.getElementById('netSub').textContent='rendement brut : '+pct(brut);
+    document.getElementById('loyerAn').textContent=eur(loyerAn);
+    document.getElementById('revenuNet').textContent=eur(revenuNet);
+    document.getElementById('result').classList.add('show');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+</script>
+</body>
+</html>
