@@ -34,4 +34,6 @@
 
   <url><loc>https://chiffreclair.fr/a-propos.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://chiffreclair.fr/contact.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://chiffreclair.fr/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://chiffreclair.fr/confidentialite.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
