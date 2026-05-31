@@ -39,7 +39,7 @@ body{
 .narrow{max-width:760px}
 
 /* ---------- Masthead (en-tête type journal) ---------- */
-.masthead{border-bottom:2px solid var(--navy);background:var(--cream)}
+.masthead{position:relative;border-bottom:2px solid var(--navy);background:var(--cream)}
 .masthead-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;max-width:1080px;margin:0 auto}
 .logo{font-family:var(--serif);font-weight:600;font-size:1.7rem;letter-spacing:-.01em;color:var(--navy);text-decoration:none}
 .logo span{color:var(--gold)}
