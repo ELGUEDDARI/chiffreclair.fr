@@ -169,6 +169,15 @@ th{background:var(--cream);color:var(--navy-soft);font-weight:600;font-family:va
 .related-card h3{font-size:1.05rem;margin:6px 0 4px}
 .related-card p{font-size:.84rem;margin:0}
 
+/* ---------- Auteur / E-E-A-T ---------- */
+.byline{font-size:.84rem;color:var(--navy-soft);margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.byline a{font-weight:600}
+.author-box{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);padding:20px;margin:34px 0}
+.author-box .author-avatar{flex:none;width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--cream);font-family:var(--serif);font-weight:600;font-size:1.4rem;display:flex;align-items:center;justify-content:center}
+.author-box .author-name{font-weight:600;color:var(--navy);margin:4px 0 6px;font-size:1rem}
+.author-box p{font-size:.88rem;margin:0}
+@media(max-width:560px){.author-box .author-avatar{display:none}}
+
 /* ---------- Footer ---------- */
 footer{background:var(--navy);color:#C9D0DD;margin-top:60px;padding:46px 0 30px}
 footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
