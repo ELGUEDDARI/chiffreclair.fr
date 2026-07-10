@@ -15,7 +15,7 @@
 </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Un auto-entrepreneur facture-t-il la TVA ?","acceptedAnswer":{"@type":"Answer","text":"Pas tant qu'il reste sous les seuils de franchise en base (36 800 € pour les services, 91 900 € pour les ventes en 2026). Au-delà, il doit facturer la TVA et la reverser."}},{"@type":"Question","name":"Quel taux de TVA pour des travaux ?","acceptedAnswer":{"@type":"Answer","text":"10 % pour la rénovation classique, 5,5 % pour les travaux d'amélioration de la performance énergétique, sous conditions."}},{"@type":"Question","name":"Quelle est la TVA sur les produits alimentaires ?","acceptedAnswer":{"@type":"Answer","text":"5,5 % pour la plupart des produits alimentaires de base, 10 % pour les plats préparés à emporter, 20 % pour les boissons alcoolisées."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment calculer la TVA à partir d'un prix TTC (TVA inversée) ?","acceptedAnswer":{"@type":"Answer","text":"On divise le TTC par (1 + taux) pour obtenir le HT, puis on soustrait. Pour un TTC de 120 € à 20 % : HT = 120 ÷ 1,20 = 100 €, donc TVA = 20 €. C'est ce qu'on appelle le calcul de la TVA inversée."}},{"@type":"Question","name":"Comment enlever la TVA d'un prix ?","acceptedAnswer":{"@type":"Answer","text":"Divisez le prix TTC par 1,20 pour un taux de 20 %, par 1,10 pour 10 %, ou par 1,055 pour 5,5 %. Le résultat est le prix hors taxes."}},{"@type":"Question","name":"Quelle est la formule de la TVA ?","acceptedAnswer":{"@type":"Answer","text":"TVA = montant HT × taux. TTC = HT × (1 + taux). HT = TTC ÷ (1 + taux)."}},{"@type":"Question","name":"Comment calculer la TVA à payer (collectée moins déductible) ?","acceptedAnswer":{"@type":"Answer","text":"TVA à payer = TVA collectée sur vos ventes − TVA déductible sur vos achats. Si le résultat est négatif, vous obtenez un crédit de TVA."}},{"@type":"Question","name":"Un auto-entrepreneur facture-t-il la TVA ?","acceptedAnswer":{"@type":"Answer","text":"Pas tant qu'il reste sous les seuils de franchise en base (autour de 37 000 € pour les services, 85 000 € pour les ventes). Au-delà, il doit facturer la TVA et la reverser."}},{"@type":"Question","name":"Quel taux de TVA pour des travaux ?","acceptedAnswer":{"@type":"Answer","text":"10 % pour la rénovation classique, 5,5 % pour les travaux d'amélioration de la performance énergétique, sous conditions."}}]}
 </script>
 </head>
 <body>
@@ -55,13 +55,52 @@
   </div>
   <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>TVA = montant HT × taux. Le TTC = HT + TVA. À l'inverse, HT = TTC ÷ (1 + taux). Tous les taux en vigueur en France métropolitaine sont proposés (des taux spécifiques s'appliquent en Corse et outre-mer).</p></div></div>
   <section class="prose" style="margin-top:30px">
-    <h2>Comment calculer la TVA ?</h2>
-    <p>Pour passer du <strong>HT au TTC</strong> : multipliez le montant hors taxes par (1 + taux). Pour un taux de 20 %, un montant HT de 100 € devient 120 € TTC. Pour passer du <strong>TTC au HT</strong> : divisez par (1 + taux). 120 € TTC redonnent 100 € HT, soit 20 € de TVA.</p>
-    <h2>Quels sont les taux de TVA en 2026 ?</h2>
-    <p>Quatre taux coexistent : <strong>20 %</strong> (normal, la majorité des biens et services), <strong>10 %</strong> (restauration, travaux de rénovation, transport), <strong>5,5 %</strong> (produits alimentaires, livres, énergie) et <strong>2,1 %</strong> (médicaments remboursables, presse). Si vous êtes auto-entrepreneur, vérifiez vos <a href="cotisations-auto-entrepreneur.html">cotisations</a> et votre seuil de franchise de TVA.</p>
+    <h2>Comment calculer la TVA&nbsp;? La formule</h2>
+    <p>La formule de base est simple&nbsp;: <strong>TVA = montant HT × taux</strong>. On en déduit les deux conversions&nbsp;:</p>
+    <ul>
+      <li><strong>Du HT au TTC</strong> : multipliez par (1 + taux). Un HT de 100&nbsp;€ à 20&nbsp;% devient <strong>120&nbsp;€ TTC</strong>.</li>
+      <li><strong>Du TTC au HT</strong> (TVA inversée) : divisez par (1 + taux). 120&nbsp;€ TTC redonnent <strong>100&nbsp;€ HT</strong>, soit 20&nbsp;€ de TVA.</li>
+    </ul>
+
+    <h2>Calcul de la TVA inversée&nbsp;: retrouver le HT depuis le TTC</h2>
+    <p>C'est le calcul le plus recherché par les pros&nbsp;: vous avez un prix TTC et voulez «&nbsp;enlever la TVA&nbsp;». Divisez simplement le TTC par&nbsp;:</p>
+    <ul>
+      <li><strong>1,20</strong> pour le taux à 20&nbsp;%</li>
+      <li><strong>1,10</strong> pour le taux à 10&nbsp;%</li>
+      <li><strong>1,055</strong> pour le taux à 5,5&nbsp;%</li>
+      <li><strong>1,021</strong> pour le taux à 2,1&nbsp;%</li>
+    </ul>
+    <p>Le sélecteur «&nbsp;Montant TTC&nbsp;» de l'outil ci-dessus fait ce calcul inversé automatiquement.</p>
+
+    <h2>Les taux de TVA en 2026 (avec exemples)</h2>
+    <div class="table-scroll" style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;margin:8px 0">
+        <thead><tr>
+          <th style="text-align:left;padding:8px;border-bottom:2px solid #e2e8f0">Taux</th>
+          <th style="text-align:left;padding:8px;border-bottom:2px solid #e2e8f0">Ce qu'il concerne</th>
+          <th style="text-align:right;padding:8px;border-bottom:2px solid #e2e8f0">100 € HT → TTC</th>
+        </tr></thead>
+        <tbody>
+          <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7"><strong>20 %</strong></td><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Taux normal (majorité des biens et services)</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">120,00 €</td></tr>
+          <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7"><strong>10 %</strong></td><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Restauration, travaux de rénovation, transport</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">110,00 €</td></tr>
+          <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7"><strong>5,5 %</strong></td><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Alimentation, livres, énergie, travaux énergétiques</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">105,50 €</td></tr>
+          <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7"><strong>2,1 %</strong></td><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Médicaments remboursables, presse</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">102,10 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.9rem;color:#64748b">Des taux spécifiques s'appliquent en Corse et en outre-mer.</p>
+
+    <h2>TVA collectée, déductible et TVA à payer</h2>
+    <p>Pour une entreprise, la TVA n'est pas un coût mais un flux&nbsp;: vous <strong>collectez</strong> la TVA sur vos ventes et vous <strong>déduisez</strong> celle payée sur vos achats. La <strong>TVA à payer</strong> à l'administration = <em>TVA collectée − TVA déductible</em>. Si le résultat est négatif, vous obtenez un <strong>crédit de TVA</strong> remboursable. En franchise en base (auto-entrepreneur sous les seuils), vous ne facturez pas de TVA et n'en déduisez pas&nbsp;: vérifiez vos <a href="cotisations-auto-entrepreneur.html">cotisations et seuils</a>.</p>
+
+    <h2>Cas particulier&nbsp;: la TVA sur la marge</h2>
+    <p>Certains secteurs (véhicules d'occasion, antiquités, biens d'occasion) appliquent la <strong>TVA sur la marge</strong>&nbsp;: la TVA porte non pas sur le prix de vente total mais sur la <strong>marge</strong> réalisée (prix de vente − prix d'achat). Elle est fréquente chez les revendeurs automobiles.</p>
+
     <dl class="faq"><h2>Questions fréquentes</h2>
-      <dt>Un auto-entrepreneur facture-t-il la TVA ?</dt><dd>Pas tant qu'il reste sous les seuils de franchise. Au-delà, il doit facturer la TVA et la reverser.</dd>
-      <dt>Quel taux pour des travaux ?</dt><dd>10 % pour la rénovation classique, 5,5 % pour les travaux d'amélioration énergétique, sous conditions.</dd>
+      <dt>Comment enlever la TVA d'un prix&nbsp;?</dt><dd>Divisez le TTC par 1,20 (20 %), 1,10 (10 %) ou 1,055 (5,5 %). Le résultat est le prix hors taxes.</dd>
+      <dt>Comment calculer la TVA à payer&nbsp;?</dt><dd>TVA collectée sur vos ventes − TVA déductible sur vos achats. Si c'est négatif, vous avez un crédit de TVA.</dd>
+      <dt>Un auto-entrepreneur facture-t-il la TVA&nbsp;?</dt><dd>Pas tant qu'il reste sous les seuils de franchise en base. Au-delà, il doit la facturer et la reverser.</dd>
+      <dt>Quel taux pour des travaux&nbsp;?</dt><dd>10 % pour la rénovation classique, 5,5 % pour les travaux d'amélioration énergétique, sous conditions.</dd>
     </dl>
   </section>
   <section class="related"><span class="kicker">À calculer aussi</span><h2>Calculateurs liés</h2>
