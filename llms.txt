@@ -1,0 +1,37 @@
+# ChiffreClair
+
+> Calculateurs et simulateurs financiers gratuits, à jour de la réglementation française 2026 : crédit immobilier, salaire brut en net, impôt sur le revenu, aides de la CAF et épargne. Sans inscription, sans stockage des données saisies, avec le détail de chaque calcul. Éditeur indépendant français.
+
+ChiffreClair aide les particuliers à comprendre leurs décisions d'argent en donnant un résultat clair et la méthode derrière chaque chiffre. Les résultats sont indicatifs et fondés sur les barèmes officiels 2026 ; pour un montant à valeur légale, l'utilisateur est renvoyé vers l'organisme concerné (CAF, impots.gouv.fr, sa banque).
+
+## Crédit & prêt immobilier
+- [Capacité d'emprunt](https://chiffreclair.fr/capacite-emprunt.html) : combien emprunter selon ses revenus (taux d'endettement 35 %).
+- [Calculateur de crédit](https://chiffreclair.fr/calculateur-credit.html) : mensualité, coût total et tableau d'amortissement.
+- [Rachat de crédit](https://chiffreclair.fr/rachat-credit.html) : regrouper ses crédits pour baisser sa mensualité.
+- [Prêt à taux zéro (PTZ)](https://chiffreclair.fr/pret-taux-zero.html) : montant du PTZ 2026 par zone, conditions, neuf ou ancien, différé.
+- [Frais de notaire](https://chiffreclair.fr/frais-notaire.html) : coût réel d'un achat immobilier.
+- [Assurance emprunteur](https://chiffreclair.fr/assurance-emprunteur.html) : changer d'assurance de prêt (loi Lemoine).
+
+## Salaire & paie
+- [Salaire brut en net](https://chiffreclair.fr/salaire-brut-net.html) : conversion brut/net 2026, différence brut/net, par statut (cadre, intérim, alternance, stage).
+- [Indemnité de licenciement](https://chiffreclair.fr/indemnite-licenciement.html) : minimum légal en fin de contrat.
+- [Cotisations auto-entrepreneur](https://chiffreclair.fr/cotisations-auto-entrepreneur.html) : cotisations URSSAF selon le chiffre d'affaires.
+
+## Impôts
+- [Impôt sur le revenu](https://chiffreclair.fr/calcul-impot-revenu.html) : barème 2026, taux marginal, quotient familial.
+- [Calcul de la TVA](https://chiffreclair.fr/calcul-tva.html) : conversion HT / TTC.
+
+## Aides de la CAF
+- [Estimation APL](https://chiffreclair.fr/calcul-apl.html) : aide au logement 2026, conditions, montant, étudiant, colocation.
+- [Prime d'activité](https://chiffreclair.fr/prime-activite.html) : complément de revenu pour les travailleurs.
+- [RSA](https://chiffreclair.fr/calcul-rsa.html) : revenu de solidarité active.
+- [Allocations familiales](https://chiffreclair.fr/allocations-familiales.html) : aide dès deux enfants.
+
+## Épargne
+- [Intérêts composés](https://chiffreclair.fr/interets-composes.html) : projection d'une épargne dans le temps.
+- [Rendement locatif](https://chiffreclair.fr/rendement-locatif.html) : rentabilité d'un investissement immobilier.
+
+## À propos
+- [À propos / la rédaction](https://chiffreclair.fr/a-propos.html)
+- [Contact](https://chiffreclair.fr/contact.html)
+- [Mentions légales](https://chiffreclair.fr/mentions-legales.html)
