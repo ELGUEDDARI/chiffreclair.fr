@@ -15,7 +15,10 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Quel est le barème de l'impôt 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Le barème progressif comporte cinq tranches : 0 %, 11 %, 30 %, 41 % et 45 %, appliquées au revenu par part fiscale."}},
+{"@type":"Question","name":"Quel est le barème de l'impôt 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Le barème progressif comporte cinq tranches appliquées au revenu par part : 0 % jusqu'à 11 497 €, 11 % de 11 497 à 29 315 €, 30 % de 29 315 à 83 823 €, 41 % de 83 823 à 180 294 €, et 45 % au-delà."}},
+{"@type":"Question","name":"Qu'est-ce que la décote sur l'impôt sur le revenu ?","acceptedAnswer":{"@type":"Answer","text":"La décote est une réduction automatique appliquée aux foyers dont l'impôt calculé est faible (environ moins de 1 960 € pour une personne seule). Elle diminue, voire annule, l'impôt des contribuables modestes. Ses seuils sont revalorisés chaque année."}},
+{"@type":"Question","name":"L'impôt sur le revenu se calcule-t-il sur le net ou le brut ?","acceptedAnswer":{"@type":"Answer","text":"Sur le net imposable, un montant légèrement supérieur au salaire net à payer et inférieur au brut. Un abattement de 10 % pour frais professionnels est déjà appliqué automatiquement sur les salaires."}},
+{"@type":"Question","name":"Doit-on déclarer un héritage aux impôts sur le revenu ?","acceptedAnswer":{"@type":"Answer","text":"Non. Un héritage n'est pas soumis à l'impôt sur le revenu. Il relève des droits de succession, réglés séparément. En revanche, les revenus produits ensuite par les biens hérités (loyers, intérêts) sont, eux, imposables."}},
 {"@type":"Question","name":"Qu'est-ce que le quotient familial ?","acceptedAnswer":{"@type":"Answer","text":"C'est le nombre de parts du foyer fiscal : 1 part par adulte, 0,5 par enfant pour les deux premiers, 1 part à partir du troisième. Il réduit l'impôt des familles."}}]}
 </script>
 </head>
@@ -95,16 +98,41 @@
       </tbody>
     </table>
 
+    <h2>Comment est calculé l'impôt sur le revenu ? Exemple concret</h2>
+    <p>Le calcul se fait en 4 étapes. Prenons un <strong>célibataire (1 part) avec 30 000 € de revenu net imposable</strong> :</p>
+    <ol>
+      <li><strong>Diviser le revenu par le nombre de parts</strong> : 30 000 € ÷ 1 = 30 000 € par part.</li>
+      <li><strong>Appliquer le barème tranche par tranche</strong> : 0 € sur la 1ʳᵉ tranche + 11 % sur 17 818 € (soit 1 960 €) + 30 % sur les 685 € restants (soit 205 €).</li>
+      <li><strong>Multiplier par le nombre de parts</strong> : ici 1 part, l'impôt brut est donc d'environ <strong>2 165 €</strong>.</li>
+      <li><strong>Ajuster</strong> : on applique ensuite la décote (voir plus bas), le plafonnement du quotient familial, puis les réductions et crédits d'impôt.</li>
+    </ol>
+    <p>C'est exactement cette mécanique qu'applique le calculateur en haut de page.</p>
+
+    <h2>L'abattement de 10 % : brut, net ou net imposable&nbsp;?</h2>
+    <p>L'impôt ne se calcule ni sur le brut, ni sur le net à payer, mais sur le <strong>net imposable</strong>. Sur les salaires, l'administration applique automatiquement un <strong>abattement de 10 % pour frais professionnels</strong> (plafonné), déjà pris en compte dans le net imposable pré-rempli sur votre déclaration. Pour partir du bon chiffre, estimez d'abord votre <a href="salaire-brut-net.html">salaire net</a>.</p>
+
+    <h2>La décote : une réduction pour les revenus modestes</h2>
+    <p>La <strong>décote</strong> réduit — voire annule — l'impôt des foyers faiblement imposés. Elle s'applique <strong>automatiquement</strong> lorsque l'impôt calculé reste sous un certain seuil (environ <strong>1 960 € pour une personne seule</strong> et <strong>3 250 € pour un couple</strong>, seuils revalorisés chaque année). Concrètement, plus votre impôt de départ est faible, plus la décote en retranche une part importante. Elle explique pourquoi de nombreux contribuables aux revenus modestes paient finalement <strong>0 €</strong> d'impôt.</p>
+
     <h2>Taux moyen et taux marginal : la différence</h2>
-    <p>Le <strong>taux marginal (TMI)</strong> est le taux de votre dernière tranche atteinte — utile pour anticiper l'impôt sur un revenu supplémentaire. Le <strong>taux moyen</strong> est l'impôt total rapporté au revenu : il est toujours plus faible que le taux marginal grâce à la progressivité.</p>
-    <p>Pour estimer votre revenu imposable, partez de votre <a href="salaire-brut-net.html">salaire net</a>. Et pour décrypter chaque tranche, consultez notre <a href="guide-bareme-impot.html">guide du barème de l'impôt sur le revenu</a> ou découvrez <a href="guide-reduire-impots.html">comment réduire vos impôts</a>.</p>
+    <p>Le <strong>taux marginal (TMI)</strong> est le taux de votre dernière tranche atteinte — utile pour anticiper l'impôt sur un revenu supplémentaire (prime, heures sup, loyer). Le <strong>taux moyen</strong> est l'impôt total rapporté au revenu : il est toujours plus faible que le taux marginal grâce à la progressivité. Dans notre exemple à 2 165 € d'impôt sur 30 000 €, le taux moyen est d'environ <strong>7 %</strong> alors que la TMI est de <strong>30 %</strong>.</p>
+
+    <h2>Paiement : prélèvement à la source, acompte et mensualisation</h2>
+    <p>Depuis le prélèvement à la source, l'impôt est retenu directement chaque mois sur votre salaire ou votre pension. Pour les revenus sans collecteur (indépendants, revenus fonciers), la DGFiP prélève des <strong>acomptes</strong> mensuels ou trimestriels. Si vous devez un reliquat après la déclaration, il est prélevé à l'automne, en une fois ou en quatre échéances au-delà d'un certain montant. Un <strong>remboursement</strong> intervient à l'été si vous avez trop versé (trop-perçu, crédits d'impôt).</p>
+    <p>Pour aller plus loin : notre <a href="guide-bareme-impot.html">guide du barème de l'impôt</a> et nos pistes pour <a href="guide-reduire-impots.html">réduire vos impôts</a> légalement.</p>
 
     <dl class="faq">
       <h2>Questions fréquentes</h2>
       <dt>Quelle différence entre revenu net et revenu net imposable&nbsp;?</dt>
       <dd>Le net imposable est légèrement supérieur au net à payer (une part de CSG n'est pas déductible). Il figure sur votre bulletin de paie et votre déclaration.</dd>
+      <dt>Doit-on déclarer un héritage aux impôts sur le revenu&nbsp;?</dt>
+      <dd>Non. Un héritage n'est pas soumis à l'impôt sur le revenu&nbsp;: il relève des droits de succession, réglés à part. Seuls les revenus générés ensuite par les biens hérités (loyers, intérêts) deviennent imposables.</dd>
+      <dt>Le salaire d'un apprenti est-il imposable&nbsp;?</dt>
+      <dd>Le salaire d'apprenti est exonéré d'impôt sur le revenu dans la limite d'un SMIC annuel. Seule la fraction dépassant ce plafond est à déclarer.</dd>
+      <dt>Combien de temps faut-il garder ses avis d'imposition&nbsp;?</dt>
+      <dd>Conservez vos avis au moins 3 ans&nbsp;: c'est le délai de reprise pendant lequel l'administration peut opérer un contrôle. Beaucoup les gardent plus longtemps par précaution.</dd>
       <dt>Comment fonctionne le quotient familial&nbsp;?</dt>
-      <dd>1 part par adulte, 0,5 part pour chacun des deux premiers enfants, 1 part à partir du troisième. Plus vous avez de parts, plus l'impôt diminue.</dd>
+      <dd>1 part par adulte, 0,5 part pour chacun des deux premiers enfants, 1 part à partir du troisième. Plus vous avez de parts, plus l'impôt diminue (dans la limite d'un plafonnement).</dd>
     </dl>
   </section>
 
