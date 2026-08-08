@@ -33,7 +33,7 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Quel est le barème de l'impôt 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Le barème progressif comporte cinq tranches appliquées au revenu par part : 0 % jusqu'à 11 497 €, 11 % de 11 497 à 29 315 €, 30 % de 29 315 à 83 823 €, 41 % de 83 823 à 180 294 €, et 45 % au-delà."}},
+{"@type":"Question","name":"Quel est le barème de l'impôt 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Le barème progressif comporte cinq tranches appliquées au revenu par part : 0 % jusqu'à 11 600 €, 11 % de 11 601 à 29 579 €, 30 % de 29 580 à 84 577 €, 41 % de 84 578 à 181 917 €, et 45 % au-delà. Seuils fixés par la loi de finances pour 2026 (revalorisation de 0,9 %)."}},
 {"@type":"Question","name":"Qu'est-ce que la décote sur l'impôt sur le revenu ?","acceptedAnswer":{"@type":"Answer","text":"La décote est une réduction automatique appliquée aux foyers dont l'impôt calculé est faible (environ moins de 1 960 € pour une personne seule). Elle diminue, voire annule, l'impôt des contribuables modestes. Ses seuils sont revalorisés chaque année."}},
 {"@type":"Question","name":"L'impôt sur le revenu se calcule-t-il sur le net ou le brut ?","acceptedAnswer":{"@type":"Answer","text":"Sur le net imposable, un montant légèrement supérieur au salaire net à payer et inférieur au brut. Un abattement de 10 % pour frais professionnels est déjà appliqué automatiquement sur les salaires."}},
 {"@type":"Question","name":"Doit-on déclarer un héritage aux impôts sur le revenu ?","acceptedAnswer":{"@type":"Answer","text":"Non. Un héritage n'est pas soumis à l'impôt sur le revenu. Il relève des droits de succession, réglés séparément. En revanche, les revenus produits ensuite par les biens hérités (loyers, intérêts) sont, eux, imposables."}},
@@ -108,11 +108,11 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
     <table style="font-family:var(--sans)">
       <thead><tr><th>Tranche de revenu par part</th><th>Taux</th></tr></thead>
       <tbody>
-        <tr><td>Jusqu'à 11 497 €</td><td>0 %</td></tr>
-        <tr><td>De 11 497 € à 29 315 €</td><td>11 %</td></tr>
-        <tr><td>De 29 315 € à 83 823 €</td><td>30 %</td></tr>
-        <tr><td>De 83 823 € à 180 294 €</td><td>41 %</td></tr>
-        <tr><td>Au-delà de 180 294 €</td><td>45 %</td></tr>
+        <tr><td>Jusqu'à 11 600 €</td><td>0 %</td></tr>
+        <tr><td>De 11 601 € à 29 579 €</td><td>11 %</td></tr>
+        <tr><td>De 29 580 € à 84 577 €</td><td>30 %</td></tr>
+        <tr><td>De 84 578 € à 181 917 €</td><td>41 %</td></tr>
+        <tr><td>Au-delà de 181 917 €</td><td>45 %</td></tr>
       </tbody>
     </table>
 
@@ -181,10 +181,10 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
 
   // Barème 2026 (revenus 2025), par part
   var tranches=[
-    {plafond:11497, taux:0},
-    {plafond:29315, taux:0.11},
-    {plafond:83823, taux:0.30},
-    {plafond:180294, taux:0.41},
+    {plafond:11600, taux:0},
+    {plafond:29579, taux:0.11},
+    {plafond:84577, taux:0.30},
+    {plafond:181917, taux:0.41},
     {plafond:Infinity, taux:0.45}
   ];
 
