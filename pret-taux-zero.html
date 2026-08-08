@@ -168,11 +168,14 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
   var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
   function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
   // Plafonds de l'operation retenue (indicatifs 2026) par zone et nb de personnes
+  // Plafonds du cout total de l'operation, offres de pret a partir d'avril 2025.
+  // Source : service-public.gouv.fr, fiche F10871, mise a jour du 13 fevrier 2026.
+  // Coefficients par nombre d'occupants : 1 / 1,5 / 1,8 / 2,1 / 2,4.
   var plaf={
-    A:[150000,210000,255000,300000,345000],
-    B1:[135000,189000,230000,270000,311000],
-    B2:[110000,154000,187000,220000,253000],
-    C:[100000,140000,170000,200000,230000]
+    A:[150000,225000,270000,315000,360000],
+    B1:[135000,202500,243000,283500,324000],
+    B2:[110000,165000,198000,231000,264000],
+    C:[100000,150000,180000,210000,240000]
   };
   document.getElementById('calcBtn').addEventListener('click',function(){
     var cout=parseFloat(document.getElementById('cout').value);

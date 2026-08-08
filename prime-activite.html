@@ -157,23 +157,25 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
   var b=document.getElementById('burger'),n=document.getElementById('nav');
   b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
 
+  // Majoration selon la TAILLE DU FOYER (2e personne +50 %, 3e et 4e +30 %, 5e et + : +40 %).
+  // Verifie sur les montants officiels : x1,5 = 977,54 EUR, x1,8 = 1173,05, x2,1 = 1368,55.
+  function facteurFoyer(nb){ var f=1; for(var k=2;k<=nb;k++){ f += (k===2?0.5:(k<=4?0.3:0.4)); } return f; }
   document.getElementById('calcBtn').addEventListener('click',function(){
     var situation=document.getElementById('situation').value;
     var enfants=parseInt(document.getElementById('enfants').value,10)||0;
     var revenu=parseFloat(document.getElementById('revenu').value);
     if(isNaN(revenu)||revenu<0)return;
 
-    // Montant forfaitaire 2026 (base célibataire), valeurs indicatives
-    var forfait=635.71;
-    var facteur=1;
-    if(situation==='couple') facteur+=0.5;
-    // Majoration par enfant : +0,3 pour les 2 premiers, +0,4 ensuite
-    for(var i=1;i<=enfants;i++){ facteur += (i<=2)?0.3:0.4; }
+    // Montant forfaitaire au 1er avril 2026 (source CAF). Distinct de celui du RSA.
+    var forfait=638.28;
+    var nbPers = 1 + (situation==='couple'?1:0) + enfants;
+    var facteur = facteurFoyer(nbPers);
     var forfaitMajore=forfait*facteur;
 
-    // Bonification individuelle (max ~177€ vers 1 SMIC, nulle sous ~0,5 SMIC)
+    // Bonification individuelle : maximum 240,63 EUR au 1er avril 2026 (source CAF).
+    // Elle demarre vers 0,5 SMIC et plafonne vers 1 SMIC : la montee est approximee.
     var bonif=0;
-    if(revenu>700){ bonif=Math.min(177, (revenu-700)/(1430-700)*177); }
+    if(revenu>700){ bonif=Math.min(240.63, (revenu-700)/(1430-700)*240.63); }
 
     // PA = forfait majoré + bonification − 39% des revenus d'activité
     var prime=forfaitMajore + bonif - 0.39*revenu;

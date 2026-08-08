@@ -120,11 +120,12 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
     var rev=parseFloat(document.getElementById('revenus').value)||0;
     var el=document.getElementById('af'),sub=document.getElementById('afSub');
     if(enf<2){ document.getElementById('result').classList.add('show'); el.textContent='0 €'; sub.textContent="Les allocations familiales débutent à partir de 2 enfants à charge."; document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'}); return; }
-    // Montant base tranche 1 (2026, indicatif) : 2 enfants = 141,99 € ; +181,95 € par enfant supplémentaire
-    var base = 141.99 + Math.max(0,enf-2)*181.95;
-    // Modulation selon revenus (plafonds indicatifs, +6 700€ par enfant au-delà du 2e)
-    var p1=74000 + Math.max(0,enf-2)*6700;
-    var p2=98700 + Math.max(0,enf-2)*6700;
+    // Montants tranche 1 au 1er avril 2026 (service-public.gouv.fr, fiche F13213) :
+    // 2 enfants = 152,25 € ; 3 enfants = 347,32 € ; soit +195,07 € par enfant au-dela du 2e.
+    var base = 152.25 + Math.max(0,enf-2)*195.07;
+    // Plafonds de ressources : 79 980 € et 106 604 € pour 2 enfants, +6 664 € par enfant en plus.
+    var p1=79980 + Math.max(0,enf-2)*6664;
+    var p2=106604 + Math.max(0,enf-2)*6664;
     var montant;
     if(rev<=p1) montant=base;
     else if(rev<=p2) montant=base/2;

@@ -33,7 +33,7 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Quel pourcentage de cotisations pour un auto-entrepreneur ?","acceptedAnswer":{"@type":"Answer","text":"Environ 12,3 % du chiffre d'affaires pour la vente de marchandises, 21,2 % pour les prestations de services commerciales ou artisanales, et 24,6 % pour les professions libérales."}},
+{"@type":"Question","name":"Quel pourcentage de cotisations pour un auto-entrepreneur ?","acceptedAnswer":{"@type":"Answer","text":"Environ 12,3 % du chiffre d'affaires pour la vente de marchandises, 21,2 % pour les prestations de services commerciales ou artisanales, et 25,6 % pour les professions libérales (taux relevé au 1er janvier 2026)."}},
 {"@type":"Question","name":"Les cotisations se calculent-elles sur le bénéfice ?","acceptedAnswer":{"@type":"Answer","text":"Non, elles se calculent sur le chiffre d'affaires encaissé, pas sur le bénéfice. Sans CA, aucune cotisation n'est due."}},
 {"@type":"Question","name":"Un auto-entrepreneur cotise-t-il pour la retraite ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Une partie des cotisations sociales finance la retraite de base et complémentaire. Mais la validation des trimestres dépend d'un chiffre d'affaires minimum : sans CA suffisant, aucun trimestre n'est validé."}},
 {"@type":"Question","name":"L'auto-entrepreneur paie-t-il la CFE ?","acceptedAnswer":{"@type":"Answer","text":"Oui, la cotisation foncière des entreprises (CFE) est due à partir de la 2e année d'activité. La première année en est exonérée, ainsi que les micro-entrepreneurs réalisant moins de 5 000 € de chiffre d'affaires annuel."}},
@@ -63,7 +63,7 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
     <div class="field"><label for="activite">Type d'activité</label><select id="activite">
       <option value="0.123">Vente de marchandises (BIC) — 12,3 %</option>
       <option value="0.212" selected>Prestations de services commerciales/artisanales — 21,2 %</option>
-      <option value="0.246">Profession libérale (BNC) — 24,6 %</option>
+      <option value="0.256">Profession libérale (BNC) — 25,6 %</option>
     </select></div>
     <label style="font-weight:400;font-size:.85rem;color:var(--navy-soft)"><input type="checkbox" id="vl" style="width:auto;display:inline"> J'ai opté pour le versement libératoire de l'impôt</label>
     <button class="btn" id="calcBtn" style="margin-top:14px">Calculer mes cotisations</button>
@@ -75,7 +75,7 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
       <div class="stat" id="vlBox" style="display:none"><div class="v" id="impotVL">—</div><div class="k">Impôt (versement libératoire)</div></div>
     </div>
   </div>
-  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Taux URSSAF 2026 indicatifs : 12,3 % (vente), 21,2 % (services BIC), 24,6 % (libéral BNC). Le versement libératoire ajoute 1 % (vente), 1,7 % (services) ou 2,2 % (BNC). La contribution à la formation professionnelle (~0,1-0,3 %) n'est pas détaillée ici. Cotisations calculées sur le CA encaissé.</p></div></div>
+  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Taux URSSAF 2026 indicatifs : 12,3 % (vente), 21,2 % (services BIC), 25,6 % (libéral BNC, taux releve au 1er janvier 2026). Le versement libératoire ajoute 1 % (vente), 1,7 % (services) ou 2,2 % (BNC). La contribution à la formation professionnelle (~0,1-0,3 %) n'est pas détaillée ici. Cotisations calculées sur le CA encaissé.</p></div></div>
   <section class="prose" style="margin-top:30px">
     <h2>Comment sont calculées les cotisations d'un auto-entrepreneur ?</h2>
     <p>Les cotisations sociales se calculent sur le <strong>chiffre d'affaires encaissé</strong> (et non sur le bénéfice), en appliquant un <strong>taux fixe selon l'activité</strong>. Pas de CA, pas de cotisation. C'est la grande simplicité du régime micro-entrepreneur.</p>
@@ -93,7 +93,7 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
         <tbody>
           <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Vente de marchandises (BIC)</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">12,3 %</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">+ 1 %</td></tr>
           <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Prestations de services (BIC)</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">21,2 %</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">+ 1,7 %</td></tr>
-          <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Profession libérale (BNC)</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">24,6 %</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">+ 2,2 %</td></tr>
+          <tr><td style="padding:7px 8px;border-bottom:1px solid #eef2f7">Profession libérale (BNC)</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">25,6 %</td><td style="text-align:right;padding:7px 8px;border-bottom:1px solid #eef2f7">+ 2,2 %</td></tr>
         </tbody>
       </table>
     </div>

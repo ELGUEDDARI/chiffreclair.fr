@@ -113,18 +113,22 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
 <script>
   var b=document.getElementById('burger'),n=document.getElementById('nav');b.addEventListener('click',function(){b.setAttribute('aria-expanded',n.classList.toggle('open'));});
   function eur(n){return n.toLocaleString('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
+  // Majoration selon la TAILLE DU FOYER (2e personne +50 %, 3e et 4e +30 %, 5e et + : +40 %).
+  // Verifie sur les montants officiels : x1,5 = 977,54 EUR, x1,8 = 1173,05, x2,1 = 1368,55.
+  function facteurFoyer(nb){ var f=1; for(var k=2;k<=nb;k++){ f += (k===2?0.5:(k<=4?0.3:0.4)); } return f; }
   document.getElementById('calcBtn').addEventListener('click',function(){
     var situation=document.getElementById('situation').value;
     var enfants=parseInt(document.getElementById('enfants').value,10)||0;
     var ressources=parseFloat(document.getElementById('ressources').value)||0;
     var logement=document.getElementById('logement').checked;
-    var forfait=635.71, facteur=1;
-    if(situation==='couple') facteur+=0.5;
-    for(var i=1;i<=enfants;i++){ facteur += (i<=2)?0.3:0.4; }
+    // Montant forfaitaire au 1er avril 2026 (decret n° 2026-220 du 30 mars 2026)
+    var forfait=651.69;
+    var nbPers = 1 + (situation==='couple'?1:0) + enfants;
+    var facteur = facteurFoyer(nbPers);
     var forfaitMajore=forfait*facteur;
-    // Forfait logement déduit (≈12% pour 1 pers, 16% pour 2, 16,5% au-delà)
+    // Forfait logement : montants officiels 2026, selon la taille du foyer
     var fl=0;
-    if(logement){ var taux=(situation==='couple'||enfants>0)?0.16:0.12; fl=forfait*taux; }
+    if(logement){ fl = nbPers===1 ? 78.20 : (nbPers===2 ? 156.41 : 193.55); }
     var rsa=forfaitMajore - fl - ressources;
     if(rsa<6) rsa=0;
     var el=document.getElementById('rsa'),sub=document.getElementById('rsaSub');
