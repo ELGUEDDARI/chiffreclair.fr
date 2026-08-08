@@ -62,16 +62,20 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
       <div class="field"><label for="prix">Prix du bien</label><div class="input-suffix"><input type="number" id="prix" value="250000" min="1000" step="1000"><span class="sfx">€</span></div></div>
       <div class="field"><label for="type">Type de logement</label><select id="type"><option value="ancien">Ancien (occasion)</option><option value="neuf">Neuf (VEFA / première vente)</option></select></div>
     </div>
+    <div class="grid2">
+      <div class="field"><label for="dept">Département du bien</label><select id="dept"></select></div>
+      <div class="field"><label for="primo">Situation de l'acheteur</label><select id="primo"><option value="0">Achat classique</option><option value="1">Première acquisition de ma résidence principale</option></select></div>
+    </div>
     <button class="btn" id="calcBtn">Calculer les frais de notaire</button>
   </div>
   <div class="result" id="result">
     <div class="headline-result"><span class="kicker">Frais de notaire estimés</span><div class="big" id="frais">—</div><div class="sub">soit <span id="pct">—</span> du prix · budget total : <span id="total">—</span></div></div>
     <div class="stats">
-      <div class="stat"><div class="v" id="droits">—</div><div class="k">Droits de mutation</div></div>
+      <div class="stat"><div class="v" id="droits">—</div><div class="k">Droits de mutation (<span id="tauxDmto">—</span>)</div></div>
       <div class="stat"><div class="v" id="emoluments">—</div><div class="k">Émoluments du notaire (TTC)</div></div>
     </div>
   </div>
-  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Calcul basé sur le barème 2026 : droits de mutation (5,80 % ancien / 0,71 % neuf), émoluments du notaire par tranches + TVA 20 %, contribution de sécurité immobilière (0,10 %) et débours forfaitaires. Estimation indicative — le montant exact figure sur le décompte du notaire.</p></div></div>
+  <div class="trust"><div><div class="who">Méthode &amp; fiabilité</div><p>Les droits de mutation dépendent du <strong>département</strong> depuis la loi de finances pour 2025 : <strong>6,32 %</strong> dans 89 départements, <strong>5,81 %</strong> dans 10, <strong>5,09 %</strong> dans 2 (Indre et Mayotte). Les primo-accédants de leur résidence principale conservent 5,81 % (5,09 % dans l'Indre, les Hautes-Pyrénées et à Mayotte). Dans le neuf, la taxe de publicité foncière réduite s'applique (0,71 %). S'y ajoutent les émoluments réglementés du notaire par tranches + TVA 20 %, la contribution de sécurité immobilière (0,10 %) et des débours forfaitaires. <br><strong>Taux vérifiés le 8 août 2026</strong> sur le tableau officiel de la DGFiP « Droits d'enregistrement et taxe de publicité foncière », applicable au 1<sup>er</sup> mai 2026. Estimation indicative — le montant exact figure sur le décompte du notaire.</p></div></div>
   <section class="prose" style="margin-top:30px">
     <h2>Que comprennent les « frais de notaire » ?</h2>
     <p>Mal nommés, les frais de notaire ne vont pas majoritairement au notaire. Ils se composent de trois blocs : les <strong>droits de mutation</strong> (taxes reversées à l'État et aux collectivités, ~80 % du total), les <strong>émoluments du notaire</strong> (sa rémunération réglementée, par tranches dégressives) et les <strong>débours</strong> (frais avancés pour les documents et formalités).</p>
@@ -134,11 +138,31 @@ gtag('config', 'G-2B7R5S4CBB', { 'anonymize_ip': true });
     for(var i=0;i<tr.length;i++){ if(p>tr[i][0]){e+=(tr[i][0]-bas)*tr[i][1];bas=tr[i][0];} else {e+=(p-bas)*tr[i][1];break;} }
     return e;
   }
+  var DMTO=[{d:"01",n:"Ain",s:0.0632,p:0.0581},{d:"02",n:"Aisne",s:0.0632,p:0.0581},{d:"03",n:"Allier",s:0.0632,p:0.0581},{d:"04",n:"Alpes-de-Haute-Provence",s:0.0632,p:0.0581},{d:"05",n:"Hautes-Alpes",s:0.0581,p:0.0581},{d:"06",n:"Alpes-Maritimes",s:0.0581,p:0.0581},{d:"07",n:"Ardèche",s:0.0581,p:0.0581},{d:"08",n:"Ardennes",s:0.0632,p:0.0581},{d:"09",n:"Ariège",s:0.0632,p:0.0581},{d:"10",n:"Aube",s:0.0632,p:0.0581},{d:"11",n:"Aude",s:0.0632,p:0.0581},{d:"12",n:"Aveyron",s:0.0632,p:0.0581},{d:"13",n:"Bouches-du-Rhône",s:0.0632,p:0.0581},{d:"14",n:"Calvados",s:0.0632,p:0.0581},{d:"15",n:"Cantal",s:0.0632,p:0.0581},{d:"16",n:"Charente",s:0.0581,p:0.0581},{d:"17",n:"Charente-Maritime",s:0.0632,p:0.0581},{d:"18",n:"Cher",s:0.0632,p:0.0581},{d:"19",n:"Corrèze",s:0.0632,p:0.0581},{d:"21",n:"Côte-d'Or",s:0.0632,p:0.0581},{d:"22",n:"Côtes-d'Armor",s:0.0632,p:0.0581},{d:"23",n:"Creuse",s:0.0632,p:0.0581},{d:"24",n:"Dordogne",s:0.0632,p:0.0581},{d:"25",n:"Doubs",s:0.0632,p:0.0581},{d:"26",n:"Drôme",s:0.0581,p:0.0581},{d:"27",n:"Eure",s:0.0632,p:0.0581},{d:"28",n:"Eure-et-Loir",s:0.0632,p:0.0581},{d:"29",n:"Finistère",s:0.0632,p:0.0581},{d:"2A",n:"Corse-du-Sud",s:0.0632,p:0.0581},{d:"2B",n:"Haute-Corse",s:0.0632,p:0.0581},{d:"30",n:"Gard",s:0.0632,p:0.0581},{d:"31",n:"Haute-Garonne",s:0.0632,p:0.0581},{d:"32",n:"Gers",s:0.0632,p:0.0581},{d:"33",n:"Gironde",s:0.0632,p:0.0581},{d:"34",n:"Hérault",s:0.0632,p:0.0581},{d:"35",n:"Ille-et-Vilaine",s:0.0632,p:0.0581},{d:"36",n:"Indre",s:0.0509,p:0.0509},{d:"37",n:"Indre-et-Loire",s:0.0632,p:0.0581},{d:"38",n:"Isère",s:0.0632,p:0.0581},{d:"39",n:"Jura",s:0.0632,p:0.0581},{d:"40",n:"Landes",s:0.0632,p:0.0581},{d:"41",n:"Loir-et-Cher",s:0.0632,p:0.0581},{d:"42",n:"Loire",s:0.0632,p:0.0581},{d:"43",n:"Haute-Loire",s:0.0632,p:0.0581},{d:"44",n:"Loire-Atlantique",s:0.0632,p:0.0581},{d:"45",n:"Loiret",s:0.0632,p:0.0581},{d:"46",n:"Lot",s:0.0632,p:0.0581},{d:"47",n:"Lot-et-Garonne",s:0.0632,p:0.0581},{d:"48",n:"Lozère",s:0.0581,p:0.0581},{d:"49",n:"Maine-et-Loire",s:0.0632,p:0.0581},{d:"50",n:"Manche",s:0.0632,p:0.0581},{d:"51",n:"Marne",s:0.0632,p:0.0581},{d:"52",n:"Haute-Marne",s:0.0632,p:0.0581},{d:"53",n:"Mayenne",s:0.0632,p:0.0581},{d:"54",n:"Meurthe-et-Moselle",s:0.0632,p:0.0581},{d:"55",n:"Meuse",s:0.0632,p:0.0581},{d:"56",n:"Morbihan",s:0.0632,p:0.0581},{d:"57",n:"Moselle",s:0.0632,p:0.0581},{d:"58",n:"Nièvre",s:0.0632,p:0.0581},{d:"59",n:"Nord",s:0.0632,p:0.0581},{d:"60",n:"Oise",s:0.0581,p:0.0581},{d:"61",n:"Orne",s:0.0632,p:0.0581},{d:"62",n:"Pas-de-Calais",s:0.0632,p:0.0581},{d:"63",n:"Puy-de-Dôme",s:0.0632,p:0.0581},{d:"64",n:"Pyrénées-Atlantiques",s:0.0632,p:0.0581},{d:"65",n:"Hautes-Pyrénées",s:0.0581,p:0.0509},{d:"66",n:"Pyrénées-Orientales",s:0.0632,p:0.0581},{d:"67",n:"Bas-Rhin",s:0.0632,p:0.0581},{d:"68",n:"Haut-Rhin",s:0.0632,p:0.0581},{d:"69",n:"Rhone et Metropole de Lyon",s:0.0632,p:0.0581},{d:"70",n:"Haute-Saône",s:0.0632,p:0.0581},{d:"71",n:"Saône-et-Loire",s:0.0581,p:0.0581},{d:"72",n:"Sarthe",s:0.0632,p:0.0581},{d:"73",n:"Savoie",s:0.0632,p:0.0581},{d:"74",n:"Haute-Savoie",s:0.0632,p:0.0581},{d:"75",n:"Paris",s:0.0632,p:0.0581},{d:"76",n:"Seine-Maritime",s:0.0632,p:0.0581},{d:"77",n:"Seine-et-Marne",s:0.0632,p:0.0581},{d:"78",n:"Yvelines",s:0.0632,p:0.0581},{d:"79",n:"Deux-Sèvres",s:0.0632,p:0.0581},{d:"80",n:"Somme",s:0.0632,p:0.0581},{d:"81",n:"Tarn",s:0.0632,p:0.0581},{d:"82",n:"Tarn-et-Garonne",s:0.0632,p:0.0581},{d:"83",n:"Var",s:0.0632,p:0.0581},{d:"84",n:"Vaucluse",s:0.0632,p:0.0581},{d:"85",n:"Vendée",s:0.0632,p:0.0581},{d:"86",n:"Vienne",s:0.0632,p:0.0581},{d:"87",n:"Haute-Vienne",s:0.0632,p:0.0581},{d:"88",n:"Vosges",s:0.0632,p:0.0581},{d:"89",n:"Yonne",s:0.0632,p:0.0581},{d:"90",n:"Territoire-de-Belfort",s:0.0632,p:0.0581},{d:"91",n:"Essonne",s:0.0632,p:0.0581},{d:"92",n:"Hauts-de-Seine",s:0.0632,p:0.0581},{d:"93",n:"Seine-Saint-Denis",s:0.0632,p:0.0581},{d:"94",n:"Val-de-Marne",s:0.0632,p:0.0581},{d:"95",n:"Val-d'Oise",s:0.0632,p:0.0581},{d:"971",n:"Guadeloupe",s:0.0581,p:0.0581},{d:"972",n:"Martinique",s:0.0632,p:0.0581},{d:"973",n:"Guyane",s:0.0632,p:0.0581},{d:"974",n:"La Réunion",s:0.0632,p:0.0581},{d:"976",n:"Mayotte",s:0.0509,p:0.0509}];
+  // Taux DMTO totaux (part departementale + 1,20 % communal + 2,37 % de frais d'assiette).
+  // s = taux hors primo-accedant, p = taux primo-accedant. Source : tableau DGFiP au 1er mai 2026.
+  (function(){
+    var sel=document.getElementById('dept');
+    for(var i=0;i<DMTO.length;i++){
+      var o=document.createElement('option');
+      o.value=DMTO[i].d; o.textContent=DMTO[i].d+' — '+DMTO[i].n;
+      if(DMTO[i].d==='75') o.selected=true;
+      sel.appendChild(o);
+    }
+  })();
+  function tauxDroits(dep,primo){
+    for(var i=0;i<DMTO.length;i++){ if(DMTO[i].d===dep) return primo?DMTO[i].p:DMTO[i].s; }
+    return 0.0632;
+  }
   document.getElementById('calcBtn').addEventListener('click',function(){
     var prix=parseFloat(document.getElementById('prix').value);
     var type=document.getElementById('type').value;
+    var dep=document.getElementById('dept').value;
+    var primo=document.getElementById('primo').value==='1';
     if(isNaN(prix)||prix<=0)return;
-    var droits=prix*(type==='neuf'?0.00715:0.0580);
+    var tx=(type==='neuf')?0.00715:tauxDroits(dep,primo);
+    document.getElementById('tauxDmto').textContent=(tx*100).toFixed(2).replace('.',',')+' %';
+    var droits=prix*tx;
     var emolTTC=emolHT(prix)*1.20;
     var csi=prix*0.001;
     var debours=1200;
