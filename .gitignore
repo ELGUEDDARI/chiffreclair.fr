@@ -8,3 +8,20 @@ OUTREACH-PRET-A-COLLER.md
 SUIVI-HEBDO/
 semrush/
 geo/
+
+# --- Donnees METIER, ne doivent JAMAIS etre publiees (depot PUBLIC) ---
+# Ajoute le 19/08/2026 : le depot est public et deploie sur chiffreclair.fr via GitHub Pages.
+# Ces dossiers contiennent des adresses e-mail de tiers (RGPD), le registre d'outreach,
+# les analyses concurrentielles et les sauvegardes de travail.
+backlinks/
+mail/
+ahrefs/
+veille/
+outils/
+semrush/
+SUIVI-HEBDO/
+SAUVEGARDE-*/
+STOCK-QUORA-*.md
+fusionner-4-doublons.py
+*.bak
+*.bak-*
